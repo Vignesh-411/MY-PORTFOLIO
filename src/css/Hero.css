@@ -209,7 +209,7 @@
   100% {
     top: 110%;
   }
-} */
+} 
 
 
 .content {
@@ -594,13 +594,13 @@ svg {
 .social-icons a {
   color: #ffffff;
   font-size: 1.5rem;
-  /* margin-right: 20px; */
+
   transition: color 0.3s ease;
   margin-bottom: 10px;
 }
 
 .social-icons a:hover {
-  /* color: #B384FF; */
+  
   color: #0d0d0d;
 }
 
