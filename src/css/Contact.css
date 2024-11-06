@@ -1,0 +1,39 @@
+.Contact {
+  width: 100%;
+  background-position: center;
+  position: relative;
+  margin-top: 55px;
+  overflow-y: hidden;
+  background-color: #0d0d0d;
+}
+
+.Contact-Container {
+  overflow-y: auto;
+  height: 100%;
+  box-sizing: border-box;
+  color: white;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+
+ ::-webkit-scrollbar {
+  padding-top: 10px;
+  width: 6px;
+  transition: opacity 0.3s; 
+  opacity: 1;
+  background-color: #0d0d0d;
+}
+::-webkit-scrollbar-track{
+  margin-top: 55px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #000000;
+} 
+

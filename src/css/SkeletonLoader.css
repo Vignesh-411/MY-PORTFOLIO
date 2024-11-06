@@ -1,0 +1,107 @@
+
+.skeleton-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+
+.skeleton-card {
+  background-color: #fff;
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skeleton-navbar {
+  background-color: #e0e0e0;
+  height: 55px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-content {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.skeleton-heading{  
+  width: 100%;
+  margin-top: 70px;
+}
+
+.skeleton-s {
+  background-color: #e0e0e0;
+  height: 90px;
+  width: 26%;
+  margin-left: 37%;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.skeleton-m {
+  background-color: #e0e0e0;
+  height: 80px;
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.skeleton-line {
+  background-color: #e0e0e0;
+  height: 160px;
+  margin-top: 30px;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-line.short {
+  width: 39%;
+  height: 280px;
+  margin-top: 160px;
+}
+
+.skeleton-line.medium {
+  width: 60%;
+height: 35rem;
+}
+
+.skeleton-navbar::before,
+.skeleton-line::before,
+.skeleton-s::before,
+.skeleton-m::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  height: 100%;
+  width: 150%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -150%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 150%;
+  }
+} 
+ 

@@ -1,0 +1,99 @@
+/* Basic reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  /* Sidebar styles */
+  .sidebar {
+    position: fixed;
+    top: 50px;
+    left: -250px; 
+    width: 50px;
+    height: auto;
+    /* background-color: #0D0D0D; */
+    color: white;
+    overflow-x: hidden;
+    transition: 0.3s ease;
+    padding-top: 10px;
+  z-index: 999;
+  }
+  
+  .sidebar.open {
+    left: 0; /* Sidebar slides in when open */
+  }
+  
+
+  .navlinks2 {
+    margin-top: 30px;
+    
+  }
+
+  .navlinks2 nav{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    width: max-content;
+    height: auto;
+
+  }
+  .navlinks2 a{
+    height: auto;
+    width: auto;
+    margin-bottom: 31px;
+    
+  }
+  
+  .navlinks2 a img {
+    height: 30px;
+    width: 29.3px;
+    /* background-color:te; */
+    border-radius: 5px;
+  }
+  
+  .navlinks2 a:hover {
+    cursor: pointer;
+  }
+
+  a.active img{
+    background-color: white;
+    margin: 1.5px;
+    
+  }
+
+  a.active {
+    background-color: white;
+    border-radius: 5px;
+    width: 32px;
+    height: 32px;
+    padding-left: 2px;
+    overflow-y: hidden;
+    padding: 0px;
+  }
+  
+
+  @font-face {
+    font-family: "MyFont";
+    src: url("../fonts/Qualy\ Bold.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    color: black;
+  }
+  
+  @font-face {
+    font-family: "MyFont2";
+    src: url("../fonts/FrozencaScriptTypeface.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    color: black;
+  }
+  
+  @font-face {
+    font-family: "MyFont1";
+    src: url("../fonts/Urban\ Storm.ttf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    
+  }
+
