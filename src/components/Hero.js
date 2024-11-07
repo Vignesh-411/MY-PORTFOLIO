@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
 
         <div className="content">
-          <h1>VIGNESH</h1>
+          <h1>VIGNESH S</h1> 
           <h2>FULL STACK DEVELOPER</h2>
         </div>
 
