@@ -12,14 +12,14 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [navLinkClicked, setNavLinkClicked] = useState(false);
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true); 
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
     setNavLinkClicked(true);
   };
 
-  // Simulate a data fetch or API call
+  
   useEffect(() => {
     setTimeout(() => {
       setLoading(false); // After 3 seconds, hide the loader
@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <>
-      <Router>
+       <Router>
         <div>
           {loading ? (
             <Loader /> // Show loader while loading
@@ -54,7 +54,7 @@ const App = () => {
             </>
           )}
         </div>
-      </Router>
+      </Router> 
     </>
   );
 };

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import "../css/Projects.css"; 
-import Image1 from "../Images/Beautiful Space Wallpaper ✨.jpg"; 
+import Image1 from "../Images/SpaceWallpaper.jpg"; 
 import 'font-awesome/css/font-awesome.min.css';
 
 
@@ -122,7 +122,7 @@ const Projects = () => {
           </div>
           <div className="button-container">
             <div className="button" onClick={gotoPrev}>
-              <i class="fa-solid fa-angle-left"></i>
+              <i className="fa-solid fa-angle-left"></i>
             </div>
             <div className="button" onClick={gotoNext}>
               <i className="fas fa-angle-right"></i>

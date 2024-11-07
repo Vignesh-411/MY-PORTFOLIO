@@ -14,7 +14,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../Images/wallpaperflare.com_wallpaper (8).jpg'); 
+  background-image: url('../Images/wallpaper8.jpg'); 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -165,7 +165,7 @@
   z-index: 1;
   font-size: 30px; 
   color: #fff; 
-} */
+} 
 
  .Head {
   width: 100%;

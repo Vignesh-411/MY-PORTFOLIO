@@ -14,19 +14,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../Images/wallpaperflare.com_wallpaper\ \(8).jpg'); 
+  background-image: url("../Images/wallpaper8.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.2; 
-  background-attachment: fixed; 
-  /* background-color: rgba(0, 0, 0, 0.5);  */
+  opacity: 0.2;
+  background-attachment: fixed;
   z-index: 0;
 }
 
-.background-image{
+.background-image {
   z-index: -999;
-  
 }
 
 .Hero-container {
@@ -90,7 +88,7 @@
   z-index: 1; /* Keeps lines in their layer, just above the Hero background */
 }
 
-.line::After {
+.line::after {
   content: "";
   display: block;
   width: 100%;
@@ -108,7 +106,6 @@
   animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
   z-index: 1;
 }
-
 
 .line:nth-child(1) {
   margin-left: -45%;
@@ -142,7 +139,6 @@
   animation-delay: 2s;
 }
 
-
 .line:nth-child(5) {
   margin-left: 15%;
 }
@@ -151,7 +147,6 @@
   animation-delay: 0.5s;
 }
 
-
 .line:nth-child(6) {
   margin-left: 30%;
 }
@@ -159,7 +154,6 @@
 .line:nth-child(6)::after {
   animation-delay: 4.5s;
 }
-
 
 .line:nth-child(7) {
   margin-left: 45%;
@@ -201,7 +195,6 @@
   animation-delay: 4s;
 }
 
-
 @keyframes drop {
   0% {
     top: -100%;
@@ -209,13 +202,11 @@
   100% {
     top: 110%;
   }
-} 
-
+}
 
 .content {
   width: 100%;
   padding-top: 20px;
-  background-color: #0D0D0D;
   height: 250px;
   position: relative;
   z-index: 2;
@@ -234,15 +225,14 @@
   width: 96%;
 }
 
-
-p{
-  color: white;  
+p {
+  color: white;
 }
 
 .content h2 {
   font-size: 3.6rem;
-   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #1922FD;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #1922fd;
   color: transparent;
   font-family: "Myfont";
   letter-spacing: 2px;
@@ -262,11 +252,11 @@ p{
   align-items: center; /* Vertically center the items */
   padding: 20px;
   color: #ffffff;
-  background-color: #0D0D0D;
+  background-color: #0d0d0d;
   z-index: 2;
 }
 .text {
-  width: 40%; 
+  width: 40%;
   font-family: "MyFont2";
   text-align: justify;
   word-spacing: -1px;
@@ -280,19 +270,19 @@ p{
   margin-top: -120px;
 }
 
-.contII h1{
+.contII h1 {
   font-size: 2.5rem;
-  background-color:transparent;
+  background-color: transparent;
   font-family: "MyFont";
   text-align: center;
   -webkit-text-stroke-width: 2px;
   letter-spacing: 3px;
-  -webkit-text-stroke-color: #8151CC;
-   color:transparent;
-   position: relative;
-   z-index: 10;
-   text-transform: capitalize;
-} 
+  -webkit-text-stroke-color: #8151cc;
+  color: transparent;
+  position: relative;
+  z-index: 10;
+  text-transform: capitalize;
+}
 
 .contII .scroll-image {
   position: relative;
@@ -332,27 +322,25 @@ p{
   position: relative;
 }
 
-.middle{
+.middle {
   margin-top: 40px;
 }
-  
 
-.mhead{
+.mhead {
   font-family: "MyFont1";
   font-size: 3rem;
   margin: 0px;
   color: #ffffff;
   text-align: center;
 }
-.m-p{
+.m-p {
   font-size: 3rem;
   text-align: center;
   font-family: "MyFont1";
-margin: 0px;
+  margin: 0px;
 }
 
-
-.quote{
+.quote {
   width: 100%;
   height: auto;
   justify-content: center;
@@ -362,8 +350,6 @@ margin: 0px;
   color: #ffffff;
   text-align: center;
 }
-
-
 
 .carousel {
   display: flex;
@@ -398,7 +384,7 @@ margin: 0px;
 }
 
 .card:hover {
-  transform: translateY(-20px)!important;
+  transform: translateY(-20px) !important;
   transition: 0.4s ease-out;
 }
 
@@ -496,16 +482,17 @@ svg {
   height: 100%;
   background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 1), /* Start with 0.2 opacity at the top */
-      rgba(0, 0, 0, 0.3) 40%, /* Increase opacity gradually */
-      rgba(0, 0, 0, 0.1) 100%  /* Full opacity at the bottom */
+      rgba(0, 0, 0, 1),
+      /* Start with 0.2 opacity at the top */ rgba(0, 0, 0, 0.3) 40%,
+      /* Increase opacity gradually */ rgba(0, 0, 0, 0.1) 100%
+        /* Full opacity at the bottom */
     ),
-    url('../Images/wallpaperflare.com_wallpaper\ \(4\).jpg') no-repeat center center;
+    url("../Images/wallpaper\ 4.jpg") no-repeat center
+      center;
   background-size: cover;
   opacity: 0.8;
   z-index: 0;
 }
-
 
 .footer-content {
   position: relative;
@@ -543,7 +530,7 @@ svg {
 .footer-cta {
   padding: 12px 24px;
   background-color: #ffffff;
-  color: #6A39B0;
+  color: #6a39b0;
   text-decoration: none;
   font-weight: 700;
   border-radius: 5px;
@@ -551,7 +538,7 @@ svg {
 }
 
 .footer-cta:hover {
-  background-color: #B384FF;
+  background-color: #b384ff;
   color: #ffffff;
 }
 
@@ -579,7 +566,7 @@ svg {
 }
 
 .footer-links-column a:hover {
-  color: #B384FF;
+  color: #b384ff;
 }
 
 .social-icons {
@@ -600,7 +587,6 @@ svg {
 }
 
 .social-icons a:hover {
-  
   color: #0d0d0d;
 }
 
@@ -613,12 +599,11 @@ svg {
   z-index: 1;
 }
 
-
 .gmail > span {
   visibility: hidden;
   position: absolute;
-  background-color: #B384FF;
-  left:76.5rem;
+  background-color: #b384ff;
+  left: 76.5rem;
   top: 34px;
   width: 47px;
   height: 19px;
@@ -634,7 +619,6 @@ svg {
 }
 .gmail > button:hover {
   cursor: pointer;
- 
 }
 
 .gmail:hover > span {
@@ -642,12 +626,11 @@ svg {
   transform: translateX(-50%) scale(1);
 }
 
-
 .github > span {
   visibility: hidden;
   position: absolute;
-  background-color: #B384FF;
-  left:76.5rem;
+  background-color: #b384ff;
+  left: 76.5rem;
   top: 76px;
   width: auto;
   height: 19px;
@@ -663,7 +646,6 @@ svg {
 }
 .github > button:hover {
   cursor: pointer;
- 
 }
 
 .github:hover > span {
@@ -671,13 +653,11 @@ svg {
   transform: translateX(-50%) scale(1);
 }
 
-
-
 .linkedin > span {
   visibility: hidden;
   position: absolute;
-  background-color: #B384FF;
-  left:76.5rem;
+  background-color: #b384ff;
+  left: 76.5rem;
   top: 116px;
   width: auto;
   height: 19px;
@@ -693,7 +673,6 @@ svg {
 }
 .linkedin > button:hover {
   cursor: pointer;
- 
 }
 
 .linkedin:hover > span {
@@ -701,13 +680,11 @@ svg {
   transform: translateX(-50%) scale(1);
 }
 
-
-
 .hashnode > span {
   visibility: hidden;
   position: absolute;
-  background-color: #B384FF;
-  left:76rem;
+  background-color: #b384ff;
+  left: 76rem;
   top: 156px;
   width: auto;
   height: 19px;
@@ -723,7 +700,6 @@ svg {
 }
 .hashnode > button:hover {
   cursor: pointer;
- 
 }
 
 .hashnode:hover > span {
@@ -736,7 +712,9 @@ svg {
 /* Media query for tablets and smaller screens */
 @media (max-width: 1024px) {
   /* Adjust font sizes and dimensions for smaller viewports */
-  .Hero h1, .content h1, .content h2 {
+  .Hero h1,
+  .content h1,
+  .content h2 {
     font-size: 2.5rem; /* Reduce font size for better readability */
   }
 
@@ -761,7 +739,9 @@ svg {
   /* Adjust layout for mobile screens */
 
   /* General layout adjustments */
-  .Hero h1, .content h1, .content h2 {
+  .Hero h1,
+  .content h1,
+  .content h2 {
     font-size: 2rem;
   }
 
@@ -790,7 +770,8 @@ svg {
     text-align: center;
   }
 
-  .footer-left, .footer-right {
+  .footer-left,
+  .footer-right {
     width: 100%;
   }
 
@@ -798,7 +779,9 @@ svg {
     font-size: 2rem;
   }
 
-  .footer-subtitle, .footer-links-column h4, .footer-links-column a {
+  .footer-subtitle,
+  .footer-links-column h4,
+  .footer-links-column a {
     font-size: 1rem;
   }
 
@@ -830,7 +813,9 @@ svg {
 @media (max-width: 480px) {
   /* Additional adjustments for very small screens */
 
-  .Hero h1, .content h1, .content h2 {
+  .Hero h1,
+  .content h1,
+  .content h2 {
     font-size: 1.8rem;
   }
 
@@ -858,7 +843,6 @@ svg {
     font-size: 10px;
   }
 }
-
 
 @media (max-width: 480px) {
   .contII {
