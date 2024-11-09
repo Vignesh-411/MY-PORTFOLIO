@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../css/Navbar.css";
 import { NavLink } from "react-router-dom";
-import Image from "../Images/briefcase.png";
+import Image from "../Images/SidebarImages/briefcase.png";
 
 const Navbar = ({ toggleSidebar }) => {
   const [isActive, setIsActive] = useState(false);

@@ -1,15 +1,15 @@
 import React from 'react';
 import '../css/Sidebar.css'; // Import CSS file for styling
 import { NavLink } from "react-router-dom";
-import Home from '../Images/home.png';
-import Projects from '../Images/project.png';
-import About from '../Images/about.png';
-import Contact from '../Images/contact.png';
+import Home from '../Images/SidebarImages/home.png';
+import Projects from '../Images/SidebarImages/project.png';
+import About from '../Images/SidebarImages/about.png';
+import Contact from '../Images/SidebarImages/contact.png';
 // 2nd set
-import Home2 from '../Images/home2.png';
-import Projects2 from '../Images/project2.png';
-import About2 from '../Images/about2.png';
-import Contact2 from '../Images/contact2.png';
+import Home2 from '../Images/SidebarImages/home2.png';
+import Projects2 from '../Images/SidebarImages/project2.png';
+import About2 from '../Images/SidebarImages/about2.png';
+import Contact2 from '../Images/SidebarImages/contact2.png';
 const Sidebar = ({isOpen}) => {
   
   return (

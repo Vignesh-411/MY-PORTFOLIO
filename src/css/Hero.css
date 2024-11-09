@@ -14,7 +14,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../Images/wallpaper8.jpg");
+  background-image: url("../Images/BackgroundImages/wallpaper8.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -305,7 +305,7 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../Images/program.png"); /* Same image as background */
+  background-image: url("../Images/BackgroundImages/program.png"); /* Same image as background */
   background-size: cover;
   background-position: center;
   box-shadow: -10px -10px 20px rgba(59, 43, 142, 0.7),
@@ -487,7 +487,7 @@ svg {
       /* Increase opacity gradually */ rgba(0, 0, 0, 0.1) 100%
         /* Full opacity at the bottom */
     ),
-    url("../Images/wallpaper\ 4.jpg") no-repeat center
+    url("../Images/BackgroundImages/wallpaper4.jpg") no-repeat center
       center;
   background-size: cover;
   opacity: 0.8;

@@ -1,9 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
-import "../css/Projects.css"; 
-import Image1 from "../Images/SpaceWallpaper.jpg"; 
-import 'font-awesome/css/font-awesome.min.css';
+import "../css/Projects.css";
+import "font-awesome/css/font-awesome.min.css";
+import  Google from "../Images/ProjectImages/google-calendar.png";
+import  Ecommerce from "../Images/ProjectImages/ecommerce.png";
+import  Calculator from "../Images/ProjectImages/calculator.png";
+import  Weather from "../Images/ProjectImages/weather-app.png";
+import  Portfolio from "../Images/ProjectImages/first-portfolio.png";
+
 
 
 const Projects = () => {
@@ -12,6 +17,8 @@ const Projects = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarSeverity, setSnackbarSeverity] = useState("success");
+  const [isHovered, setIsHovered] = useState(false);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
     slidesRef.current = document.querySelectorAll(".item");
@@ -30,9 +37,14 @@ const Projects = () => {
   };
 
   useEffect(() => {
-    const interval = setInterval(gotoNext, 2000);
-    return () => clearInterval(interval);
-  }, [current]);
+    if (!isHovered) {
+      // Only set interval if not hovered
+      intervalRef.current = setInterval(gotoNext, 3000);
+    } else {
+      clearInterval(intervalRef.current); // Clear interval if hovered
+    }
+    return () => clearInterval(intervalRef.current); // Cleanup on unmount or hover change
+  }, [current, isHovered]); // Depend on both current and isHovered
 
   useEffect(() => {
     const slides = slidesRef.current;
@@ -62,30 +74,29 @@ const Projects = () => {
     setSnackbarSeverity(severity);
     setSnackbarOpen(true);
   };
-    
-      const handleSnackbarClose = (event, reason) => {
-        if (reason === 'clickaway') return;
-        setSnackbarOpen(false);
-      };
-    
-      const handleItemClick = (link) => {
-        // Close the Snackbar if it's open before opening it again
-        if (snackbarOpen) {
-          setSnackbarOpen(false);
-        }
-    
-        setTimeout(() => {
-          if (link) {
-            window.open(link, "_blank"); // Open if link is valid
-            handleSnackbarOpen("Project link opened successfully!", "success");
-          } else {
-            handleSnackbarOpen("Error: Project link is either not working or unavailable!", "error");
-          }
-        }, 100); // Wait for the Snackbar to close before opening it again
-      };
-    
 
- 
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === "clickaway") return;
+    setSnackbarOpen(false);
+  };
+
+  const handleItemClick = (link) => {
+    if (snackbarOpen) {
+      setSnackbarOpen(false);
+    }
+
+    setTimeout(() => {
+      if (link) {
+        window.open(link, "_blank");
+        handleSnackbarOpen("Project link opened successfully!", "success");
+      } else {
+        handleSnackbarOpen(
+          "Error: Project link is either not working or unavailable!",
+          "error"
+        );
+      }
+    }, 100);
+  };
 
   return (
     <div className="Projects">
@@ -93,32 +104,58 @@ const Projects = () => {
         <div className="items">
           <div
             className="item"
-            onClick={() => handleItemClick("https://www.youtube.com/")}
+            onClick={() => handleItemClick("https://google-calendar.tiiny.site/")}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)} 
           >
-            <img src="http://via.placeholder.com/500x500" alt="prev-side" />
-            <div className="overlay">Project Details for Previous Side</div>
+            <img src={Google} alt="prev-side" />
+            <div className="overlay">
+              <h1>Google Calendar</h1>
+            </div>
           </div>
           <div
             className="item"
             onClick={() => handleItemClick("https://nonexistent-link.com")}
+            onMouseEnter={() => setIsHovered(true)} 
+            onMouseLeave={() => setIsHovered(false)}
           >
-            <img src="http://via.placeholder.com/500x500" alt="prev" />
-            <div className="overlay">Project Details for Previous</div>
+            <img src={Ecommerce} alt="prev" />
+            <div className="overlay">
+              <h1>E-Commerce</h1>
+            </div>
           </div>
-          <div className="item active" onClick={() => handleItemClick("")}>
-            <img src={Image1} alt="active" />
-            <div className="overlay">Main Project Details</div>
+          <div
+            className="item active"
+            onClick={() => handleItemClick("https://project-react-lovat-omega.vercel.app/")}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <img src={Portfolio} alt="active" />
+            <div className="overlay">
+              <h1>Fist Portfolio</h1>
+            </div>
           </div>
           <div
             className="item"
-            onClick={() => handleItemClick("https://www.example.com")}
+            onClick={() => handleItemClick("https://weather-application-two-liart.vercel.app/")}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
           >
-            <img src="http://via.placeholder.com/500x500" alt="next" />
-            <div className="overlay">Project Details for Next</div>
+            <img src={Weather} alt="next" />
+            <div className="overlay">
+              <h1>Weather Apploicatiion</h1>
+            </div>
           </div>
-          <div className="item" onClick={() => handleItemClick("")}>
-            <img src="http://via.placeholder.com/500x500" alt="next-side" />
-            <div className="overlay">Project Details for Next Side</div>
+          <div
+            className="item"
+            onClick={() => handleItemClick("https://calculator-theta-blue.vercel.app/")}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <img src={Calculator} alt="next-side" />
+            <div className="overlay">
+              <h1>Calculator</h1>
+            </div>
           </div>
           <div className="button-container">
             <div className="button" onClick={gotoPrev}>
@@ -131,26 +168,24 @@ const Projects = () => {
         </div>
       </div>
       <div className="Head">
-          <h1>recent project highlights</h1>
+        <h1>recent project highlights</h1>
       </div>
 
-     
-
-       {/* Snackbar component */}
-       <Snackbar
-         open={snackbarOpen}
-         autoHideDuration={2000}
-         onClose={handleSnackbarClose}
-         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-     >
-         <Alert
-           onClose={handleSnackbarClose}
-           severity={snackbarSeverity}
-           sx={{ display: 'flex', alignItems: 'center' }}
-         >
-           {snackbarMessage}
-         </Alert>
-       </Snackbar>
+    
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={2000}
+        onClose={handleSnackbarClose}
+        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+      >
+        <Alert
+          onClose={handleSnackbarClose}
+          severity={snackbarSeverity}
+          sx={{ display: "flex", alignItems: "center" }}
+        >
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
     </div>
   );
 };
