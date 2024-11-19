@@ -102,6 +102,18 @@ const Projects = () => {
     <div className="Projects">
       <div className="Projects-container">
         <div className="items">
+       
+          <div
+            className="item"
+            onClick={() => handleItemClick("https://e-commerce-woad-phi.vercel.app/")}
+            onMouseEnter={() => setIsHovered(true)} 
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <img src={Ecommerce} alt="prev" />
+            <div className="overlay">
+              <h1>E-Commerce</h1>
+            </div>
+          </div>
           <div
             className="item"
             onClick={() => handleItemClick("https://google-calendar.tiiny.site/")}
@@ -111,17 +123,6 @@ const Projects = () => {
             <img src={Google} alt="prev-side" />
             <div className="overlay">
               <h1>Google Calendar</h1>
-            </div>
-          </div>
-          <div
-            className="item"
-            onClick={() => handleItemClick("https://nonexistent-link.com")}
-            onMouseEnter={() => setIsHovered(true)} 
-            onMouseLeave={() => setIsHovered(false)}
-          >
-            <img src={Ecommerce} alt="prev" />
-            <div className="overlay">
-              <h1>E-Commerce</h1>
             </div>
           </div>
           <div
