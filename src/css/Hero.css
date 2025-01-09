@@ -487,8 +487,7 @@ svg {
       /* Increase opacity gradually */ rgba(0, 0, 0, 0.1) 100%
         /* Full opacity at the bottom */
     ),
-    url("../Images/BackgroundImages/wallpaper4.jpg") no-repeat center
-      center;
+    url("../Images/BackgroundImages/wallpaper4.jpg") no-repeat center center;
   background-size: cover;
   opacity: 0.8;
   z-index: 0;
@@ -598,7 +597,7 @@ svg {
   color: #cccccc;
   z-index: 1;
 }
-
+/* 
 .gmail > span {
   visibility: hidden;
   position: absolute;
@@ -624,253 +623,240 @@ svg {
 .gmail:hover > span {
   visibility: visible;
   transform: translateX(-50%) scale(1);
+} */
+
+.gmail {
+  position: relative;
+  display: inline-block;
+}
+
+.gmail > span {
+  visibility: hidden;
+  position: absolute;
+  background-color: #b384ff;
+  color: white;
+  right: 30%; 
+  top: 5px;
+  width: auto; /* Adjusts width dynamically to fit content */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: "MyFont3", sans-serif;
+  transform: translateX(-50%) scale(0); /* Hide and scale down */
+  transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.gmail:hover > span {
+  visibility: visible;
+  transform: translateX(-50%) scale(1); /* Show tooltip */
+}
+
+.github {
+  position: relative;
+  display: inline-block;
 }
 
 .github > span {
   visibility: hidden;
   position: absolute;
   background-color: #b384ff;
-  left: 76.5rem;
-  top: 76px;
-  width: auto;
-  height: 19px;
+  color: white;
+  right: 30%; 
+  top: 5px;
+  width: auto; /* Adjusts width dynamically to fit content */
+  padding: 5px 10px;
   border-radius: 5px;
   font-size: 11px;
   font-weight: 500;
-  font-family: "MyFont3";
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 8px;
-  transform: translateX(-50%) scale(0);
-  transition: transform 0.2s ease-in-out;
-}
-.github > button:hover {
-  cursor: pointer;
+  font-family: "MyFont3", sans-serif;
+  transform: translateX(-50%) scale(0); /* Hide and scale down */
+  transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  z-index: 10;
+  white-space: nowrap;
 }
 
 .github:hover > span {
   visibility: visible;
-  transform: translateX(-50%) scale(1);
+  transform: translateX(-50%) scale(1); /* Show tooltip */
+}
+
+.linkedin  {
+  position: relative;
+  display: inline-block;
 }
 
 .linkedin > span {
   visibility: hidden;
   position: absolute;
   background-color: #b384ff;
-  left: 76.5rem;
-  top: 116px;
-  width: auto;
-  height: 19px;
+  color: white;
+  right: 10%; 
+  top: 5px;
+  width: auto; /* Adjusts width dynamically to fit content */
+  padding: 5px 10px;
   border-radius: 5px;
   font-size: 11px;
   font-weight: 500;
-  font-family: "MyFont3";
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 8px;
-  transform: translateX(-50%) scale(0);
-  transition: transform 0.2s ease-in-out;
-}
-.linkedin > button:hover {
-  cursor: pointer;
+  font-family: "MyFont3", sans-serif;
+  transform: translateX(-50%) scale(0); /* Hide and scale down */
+  transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  z-index: 10;
+  white-space: nowrap;
 }
 
 .linkedin:hover > span {
   visibility: visible;
-  transform: translateX(-50%) scale(1);
+  transform: translateX(-50%) scale(1); /* Show tooltip */
+}
+.hashnode {
+  position: relative;
+  display: inline-block;
 }
 
 .hashnode > span {
   visibility: hidden;
   position: absolute;
   background-color: #b384ff;
-  left: 76rem;
-  top: 156px;
-  width: auto;
-  height: 19px;
+  color: white;
+  right: -30%; 
+  top: 5px;
+  width: auto; /* Adjusts width dynamically to fit content */
+  padding: 5px 10px;
   border-radius: 5px;
   font-size: 11px;
   font-weight: 500;
-  font-family: "MyFont3";
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 8px;
-  transform: translateX(-50%) scale(0);
-  transition: transform 0.2s ease-in-out;
-}
-.hashnode > button:hover {
-  cursor: pointer;
+  font-family: "MyFont3", sans-serif;
+  transform: translateX(-50%) scale(0); /* Hide and scale down */
+  transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  z-index: 10;
+  white-space: nowrap;
 }
 
 .hashnode:hover > span {
   visibility: visible;
-  transform: translateX(-50%) scale(1);
+  transform: translateX(-50%) scale(1); /* Show tooltip */
 }
 
-/* Default styles apply to desktop and larger screens. */
 
-/* Media query for tablets and smaller screens */
-@media (max-width: 1024px) {
-  /* Adjust font sizes and dimensions for smaller viewports */
-  .Hero h1,
-  .content h1,
-  .content h2 {
-    font-size: 2.5rem; /* Reduce font size for better readability */
-  }
 
-  .contII h1 {
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-  }
-
-  .contII .scroll-image {
-    width: 80%;
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .text {
-    width: 60%; /* Adjust text width for smaller screens */
-    font-size: 0.9rem;
-  }
-}
-
-/* Media query for mobile screens */
-@media (max-width: 768px) {
-  /* Adjust layout for mobile screens */
-
-  /* General layout adjustments */
-  .Hero h1,
-  .content h1,
-  .content h2 {
-    font-size: 2rem;
-  }
-
-  .contII {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center;
-    padding: 10px;
-  }
-
-  .text {
-    width: 90%; /* Increase width to occupy more space */
-    font-size: 0.8rem;
-    margin-top: 0;
-  }
-
-  .contII .scroll-image {
-    width: 100%;
-    height: 25rem;
-    margin-top: 15px;
-  }
-
-  /* Footer adjustments */
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-left,
-  .footer-right {
-    width: 100%;
-  }
-
-  .footer-title {
-    font-size: 2rem;
-  }
-
-  .footer-subtitle,
-  .footer-links-column h4,
-  .footer-links-column a {
-    font-size: 1rem;
-  }
-
-  .footer-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-links-column {
-    margin-bottom: 20px;
-  }
-
-  .social-icons {
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Adjust positions of tooltips */
+@media (max-width: 1140px) {
   .gmail > span,
   .github > span,
   .linkedin > span,
   .hashnode > span {
-    left: 50%; /* Center tooltips on mobile */
-    top: 35px; /* Adjust as necessary */
-    transform: translateX(-50%) scale(0); /* Keep center alignment */
+    font-size: 12px;
+    top: 40px;
+    padding: 6px 12px;
   }
 }
 
-@media (max-width: 480px) {
-  /* Additional adjustments for very small screens */
-
-  .Hero h1,
-  .content h1,
-  .content h2 {
-    font-size: 1.8rem;
+@media (max-width: 1024px) {
+  .gmail > span,
+  .github > span,
+  .linkedin > span,
+  .hashnode > span{
+    top: 3px;
   }
 
-  .contII h1 {
-    font-size: 1.5rem;
+  .social-icons{
+    margin-top: 70px;
+    margin-right: 20px;
   }
 
-  .text {
-    font-size: 0.7rem;
+  .footer-title{
+    font-size: 40px;
+    margin-bottom: 20px;
   }
 
-  .footer-title {
-    font-size: 1.8rem;
+  .footer-subtitle{
+    font-size: 15px;
   }
 
-  .footer-links-column a {
-    font-size: 0.9rem;
+  .footer-links-column{
+    margin-bottom: 30px;
   }
+}
 
-  /* Tooltip adjustments for very small screens */
+@media (max-width: 768px) {
   .gmail > span,
   .github > span,
   .linkedin > span,
   .hashnode > span {
     font-size: 10px;
+    top: 10 px;
+    padding: 4px 8px;
+  }
+
+  .social-icons{
+    margin-top: 20px;
+    margin-right: 50px;
+  }
+
+  .footer-title{
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  .footer-subtitle{
+    font-size: 12px;
+  }
+
+  .footer-links-column{
+    margin-bottom: 30px;
+  }
+
+}
+
+@media (max-width: 425px) {
+   
+  .gmail > span,
+  .github > span,
+  .linkedin > span,
+  .hashnode > span {
+    font-size: 9px;
+    top: 34px;
+    padding: 4px 6px;
+  }
+  }
+
+  .social-icons{
+    margin-top: 20px;
+    margin-right:70px;
+  }
+
+  .footer-title{
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    width: 250px;
+  }
+
+  .footer-subtitle{
+    font-size: 12px;
+    width: 250px;
+  }
+
+  .footer-links-column{
+    margin-bottom: 30px;
+  }
+
+
+@media (max-width: 375px) {
+  .gmail > span {
+    font-size: 8px;
+    top: 32px;
+    padding: 3px 6px;
   }
 }
 
-@media (max-width: 480px) {
-  .contII {
-    flex-direction: column; /* Stack image above text */
-    align-items: center;
-  }
-
-  .contII .scroll-image {
-    width: 100%;
-    margin-bottom: 20px;
-    transform: translateY(-50px); /* Initial downward position */
-    transition: transform 0.5s ease-out;
-  }
-
-  .contII .text {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    transform: translateY(50px); /* Initial upward position */
-    transition: transform 0.5s ease-out;
-  }
-
-  /* Scrolling effect */
-  .contII.scrolled .scroll-image {
-    transform: translateY(0); /* Move image to default position */
-  }
-
-  .contII.scrolled .text {
-    transform: translateY(0); /* Move text to default position */
+@media (max-width: 320px) {
+  .gmail > span {
+    font-size: 8px;
+    top: 30px;
+    padding: 3px 5px;
   }
 }

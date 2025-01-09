@@ -1,10 +1,10 @@
 :root {
-  --orchid: #F92672;
-  --br-blue: #66D9EF;
-  --henn1nk: #A6E22E;
-  --spice: #FD971F;
-  --classColour: #FFE792;
-  --parColour: #F8F8F2;
+  --orchid: #f92672;
+  --br-blue: #66d9ef;
+  --henn1nk: #a6e22e;
+  --spice: #fd971f;
+  --classColour: #ffe792;
+  --parColour: #f8f8f2;
 }
 
 .loader-container {
@@ -396,10 +396,41 @@
 
 @keyframes scroll {
   from {
-    top:0px;
+    top: 0px;
   }
   to {
     top: -145px;
   }
+}
+
+
+@media (max-width: 768px) {
+  .loader-container {
+    width: 300px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 431px) {
+  .loader-container {
+  display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+  .loader-container {
+    width: 300px;
+    
+  }
+}
+
+@media (max-height: 345px) {
+
+  .loader-container {
+    width: 300px;
+    margin-top: 20px;
+  }
+  
 }
 

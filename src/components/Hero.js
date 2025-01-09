@@ -7,7 +7,7 @@ import CodeAnimation from '../components/CodeAnimation';
 const Hero = () => {
   const [scrollPos, setScrollPos] = useState(0);
   const [quote, setQuote] = useState("");
-  const [author, setAuthor] = useState(""); // State for the author
+  const [author, setAuthor] = useState(""); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,19 +18,19 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Fetch a random quote and author when the component mounts
+  
   useEffect(() => {
     fetch("https://dummyjson.com/quotes")
       .then((res) => res.json())
       .then((data) => {
         const randomQuoteData = data.quotes[Math.floor(Math.random() * data.quotes.length)];
         setQuote(randomQuoteData.quote);
-        setAuthor(randomQuoteData.author); // Set the author
+        setAuthor(randomQuoteData.author); 
       })
       .catch((error) => {
         console.error("Error fetching quote:", error);
         setQuote("Believe you can and you're halfway there.");
-        setAuthor("Theodore Roosevelt"); // Fallback author
+        setAuthor("Theodore Roosevelt");
       });
   }, []);
 
@@ -107,7 +107,7 @@ const Hero = () => {
     <div className="footer-left">
       <h2 className="footer-title">Let's Create Something Amazing</h2>
       <p className="footer-subtitle">Ready to take your project to the next level? Get in touch with me and let's bring your ideas to life.</p>
-      <a href="/contact" className="footer-cta">Contact Us</a>
+      <a href="/contact" className="footer-cta">CONTACT</a>
       <div className="footer-links">
         <div className="footer-links-column">
           <h4>Profile</h4>
@@ -131,7 +131,6 @@ const Hero = () => {
     </div>
   </div>
   <div className="footer-bottom">
-    {/* <p>&copy;COPYRIGHTS OWNED BY VIGNESH </p> */}
     <CodeAnimation/>
   </div>
 </footer>
