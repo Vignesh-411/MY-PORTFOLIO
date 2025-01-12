@@ -18,8 +18,9 @@ body {
 
 .imghead h1 {
   text-align: center;
-  color: #fff;
+  color: #000000;
   font-size: 35px;
+  font-family: "Myfont3";
 }
 
 .area {
@@ -141,7 +142,7 @@ body {
 .circledoodle{
   width: 98%;
   margin-left: 1%;
-  margin-top: 5px;
+  margin-top: 7px;
   border-radius: 10px;
   height: 240px;
 }
@@ -159,22 +160,20 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
+  height:37px;
 }
 
 .designimage > p{
   text-align: center;
   font-weight: bold;
-  width: 90%;
-  margin-left: 4%;
+  width: 80%;
+  margin-left: 7.5%;
+  font-size: 20px;
 }
 
 
-@media (max-width: 700px) {
-  .circledoodle{
-    width: 98%;
-    margin-left: 1%;
-    margin-top: 5px;
-    border-radius: 10px;
-    height: 240px;
+@media (max-width: 1023px) {
+  .circledoodle{    
+    height: 300px;
   }
 }
