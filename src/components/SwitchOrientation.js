@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/SwitchOrientation.css";
-import SwitchImage from "../Images/switcherror.png";
+import SwitchImage from "../Images/doodle.png";
 import Rotate from "../Images/rotatedevice.png";
 const SwitchOrientaion = () => {
   return (
@@ -18,12 +18,10 @@ const SwitchOrientaion = () => {
             <div className="designimage">
             <div class="imghead">
               <img className="rotate" src={Rotate} alt="siwtchorientationimage"></img>
-              <h1>Switch Orientation</h1>
+              <h1>SWITCH ORIENTATION</h1>
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              fringilla enim non est tempus, a semper ipsum cursus. Morbi vel ex
-              vel nunc tempus semper. Aenean in bibendum ligula.
+             Oops! I haven't developed the Landscape mode yet, but I'm Still working on it. So please switch to Portrait orientation for better experience of my portfolio. Thank You :)
             </p>
             </div>
           </div>

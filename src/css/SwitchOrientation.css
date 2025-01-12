@@ -13,15 +13,13 @@ body {
 .context {
   width: 100%;
   position: absolute;
-  top: 50px;
   align-items: center;
 }
 
 .imghead h1 {
   text-align: center;
   color: #fff;
-  font-size: 50px;
-  width: 70%;
+  font-size: 35px;
 }
 
 .area {
@@ -140,15 +138,17 @@ body {
   }
 }
 
-.circledoodle {
-  width: 200px;
-  height: 200px;
-  display: none;
+.circledoodle{
+  width: 98%;
+  margin-left: 1%;
+  margin-top: 5px;
+  border-radius: 10px;
+  height: 240px;
 }
 
 .rotate {
-  width: 80px;
-  height: 80px;
+  width: 40px;
+  height: 40px;
 }
 
 .set-two{
@@ -157,4 +157,24 @@ body {
 
 .imghead{
   display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.designimage > p{
+  text-align: center;
+  font-weight: bold;
+  width: 90%;
+  margin-left: 4%;
+}
+
+
+@media (max-width: 700px) {
+  .circledoodle{
+    width: 98%;
+    margin-left: 1%;
+    margin-top: 5px;
+    border-radius: 10px;
+    height: 240px;
+  }
 }
