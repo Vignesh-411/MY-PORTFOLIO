@@ -3,12 +3,10 @@
   height: 55px;
   display: flex;
   position: fixed;
-  top: 0; 
+  top: 0;
   z-index: 999;
-background-color: #0d0d0d;
+  background-color: #0d0d0d;
 }
-
-
 
 .set-1 {
   width: 50px;
@@ -28,6 +26,10 @@ background-color: #0d0d0d;
   z-index: 999;
 }
 
+.set-2 > h1 {
+  padding-top: 5px;
+}
+
 .trigger {
   position: absolute;
   z-index: 1;
@@ -39,7 +41,6 @@ background-color: #0d0d0d;
   cursor: pointer;
 }
 .bars .linee {
-  
   fill: none;
   stroke: #ffffff;
   stroke-width: 6;
@@ -70,10 +71,47 @@ background-color: #0d0d0d;
   margin-top: 6px;
   margin-right: 10px;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding-top: 8px;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
 }
 
+.navlinks .tooltip {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 15px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  white-space: nowrap;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
 
+.tooltip.faded {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: -5px; /* Arrow positioned above the tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+}
 
 .navlinks a {
   color: white;
@@ -82,14 +120,9 @@ background-color: #0d0d0d;
   padding: 6px 6px 3px;
   text-transform: uppercase;
   font-size: 14px;
-  font-family: 'MyFont';
+  font-family: "MyFont";
   z-index: 1;
 }
-
-
-  
-  
-
 
 .navlinks a:hover {
   cursor: pointer;
@@ -103,54 +136,11 @@ background-color: #0d0d0d;
   font-size: 14px;
   font-weight: 900;
   width: auto;
-  padding: 4px 6px 2.5px; 
+  padding: 4px 6px 2.5px;
   height: auto;
   z-index: 999;
-  margin-top: 0; 
+  margin-top: 0;
 }
-  
-
-
-@font-face {
-  font-family: "MyFont";
-  src: url("../fonts/Qualy\ Bold.ttf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  color: black;
-}
-
-@font-face {
-  font-family: "MyFont2";
-  src: url("../fonts/FrozencaScriptTypeface.ttf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  color: black;
-}
-
-@font-face {
-  font-family: "MyFont3";
-  src: url("../fonts/NexaRustSans-Trial-Black2.ttf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  color: black;
-}
-
-@font-face {
-  font-family: "MyFont4";
-  src: url("../fonts/Brushot-Bold.ttf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  color: black;
-}
-
-@font-face {
-  font-family: "MyFont5";
-  src: url("../fonts/Booked.ttf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  color: black;
-}
-
 
 .set-2 h1 {
   font-family: "MyFont", sans-serif;
@@ -161,43 +151,44 @@ background-color: #0d0d0d;
   margin-top: 0px;
 }
 
-
-.set-2 img{
-    height:30px;
-    width: 30px;
-    margin-top: 3px;
+.set-2 img {
+  height: 30px;
+  width: 30px;
+  margin-top: 3px;
 }
 
-.set-2 img:hover{
-    cursor: pointer;
+.set-2 img:hover {
+  cursor: pointer;
 }
-
+.download {
+  position: relative;
+  display: inline-block;
+}
 
 .download > span {
-  visibility: visible; 
+  visibility: visible;
   position: absolute;
-  left: 36.8%; 
-  top: 48px; 
-  width: auto;
+  top: 48px;
+  left: -500%;
+  width: 330px;
   height: auto;
   border-radius: 5px;
   font-size: 15px;
-  color: white; 
+  color: white;
   font-family: "MyFont";
-  padding: 8px 10px; 
+  padding: 8px 10px;
   transform: translateX (0) translate;
   transition: transform 0.2s ease-in-out;
 }
 
-
 .scroll-up {
-  transform: translate(0%,-20px);
+  transform: translate(0%, -20px);
 }
-/* 
+
 .download > span::after {
-  content: '';
+  content: "";
   position: absolute;
-  left: 49%;
+  left: 48.5%;
   bottom: 100%;
   width: auto;
   border-width: 5px;
@@ -208,33 +199,12 @@ background-color: #0d0d0d;
 
 .scroll-up::after {
   transform: rotate(-90deg);
-  margin-left: 20px; 
-  transition: transform 0.4s ease-in-out, margin-left 0.3s ease-in-out; 
-} */
-
-
-
-.download > span::after {
-  content: '';
-  position: absolute;
-  left: 48.5%;
-  bottom: 100%;
-  width: auto;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent white transparent;
-  transition: transform 0.3s ease-in-out, margin-left 0.3s ease-in-out; /* Smooth transition for transform and margin-left */
+  margin-left: 20px;
+  transition: transform 0.3s ease-in-out, margin-left 0.3s ease-in-out;
 }
 
-.scroll-up::after {
-  transform: rotate(-90deg);
-  margin-left: 20px; /* Adjusted margin-left for smooth movement */
-  transition: transform 0.3s ease-in-out, margin-left 0.3s ease-in-out; /* Smooth transition for transform and margin-left */
-}
-
-/* Add another pseudo-element for the opposite arrow */
 .download > span::before {
-  content: '';
+  content: "";
   position: absolute;
   right: 48.5%;
   bottom: 100%;
@@ -242,11 +212,94 @@ background-color: #0d0d0d;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent white transparent;
-  transition: transform 0.3s ease-in-out, margin-right 0.3s ease-in-out; /* Smooth transition for transform and margin-right */
+  transition: transform 0.3s ease-in-out, margin-right 0.3s ease-in-out;
 }
 
 .scroll-up::before {
-  transform: rotate(90deg); /* Rotate opposite of the original one */
-  margin-right: 20px; /* Move the opposite arrow to the right */
-  transition: transform 0.3s ease-in-out, margin-right 0.3s ease-in-out; /* Smooth transition for transform and margin-right */
+  transform: rotate(90deg);
+  margin-right: 20px;
+  transition: transform 0.3s ease-in-out, margin-right 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .tooltip {
+    display: none;
+  }
+
+  .download {
+    left: 2%;
+  }
+
+  .download > span {
+    font-size: 13px;
+    width: 300px;
+    left: -450%;
+  }
+
+  .set-2 h1 {
+    font-size: 28px;
+    margin-left: 2px;
+    margin-top: 3px;
+  }
+
+  .navlinks a {
+    font-size: 12px;
+  }
+
+  .navlinks a.active {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navlinks {
+    display: none;
+  }
+
+  .download {
+    left: -30%;
+  }
+
+  .download > span {
+    font-size: 16px;
+    width: 360px;
+    left: -550%;
+  }
+
+  .set-2 h1 {
+    font-size: 40px;
+    margin-left: 10px;
+
+    margin-top: 0px;
+  }
+
+  .bars {
+    width: 60px;
+    margin-top: -2px;
+  }
+  .bars .linee {
+    stroke-width: 8;
+  }
+}
+
+
+@media (max-width: 551px) {
+  .download {
+    left: 43%;
+  }
+
+  .set-2 h1 {
+    display: none;
+  }
+}
+
+@media (max-width: 421px) {
+  .download {
+    left: 44%;
+  }
+  .download > span {
+    font-size: 13px;
+    width: 290px;
+    left: -430%;
+  }  
 }

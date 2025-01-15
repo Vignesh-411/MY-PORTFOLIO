@@ -9,6 +9,20 @@ const Hero = () => {
   const [quote, setQuote] = useState("");
   const [author, setAuthor] = useState(""); 
 
+  const handleClick = (event) => {
+    const mediaQuery = window.matchMedia("(max-width: 427px)"); 
+
+    if (mediaQuery.matches) {
+      event.preventDefault(); 
+      const link = event.currentTarget.getAttribute("href");
+
+      // Delay navigation by 2 seconds
+      setTimeout(() => {
+        window.location.href = link;
+      }, 1000);
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollPos(window.scrollY);
@@ -123,10 +137,10 @@ const Hero = () => {
     </div>
     <div className="footer-right">
       <div className="social-icons">
-        <a className="gmail" href="mailto:vignesh19.61.23@gmail.com"><i className="fas fa-envelope w-40"></i><span>G-MAIL</span></a>
-        <a className="github" href="https://github.com/Vignesh-411"><i className="fab fa-github"></i><span>GITHUB</span></a>
-        <a className="linkedin" href="https://www.linkedin.com/in/vignesh-sekar-v/"><i className="fab fa-linkedin"></i><span>LINKEDIN</span></a>
-        <a className="hashnode" href="https://vickydomain.hashnode.dev/?source=top_nav_blog_home"><i className="fa-brands fa-hashnode"></i><span>HASHNODE</span></a>
+        <a className="gmail" href="mailto:vignesh19.61.23@gmail.com" onClick={handleClick}><i className="fas fa-envelope w-40"></i><span>G-MAIL</span></a>
+        <a className="github" href="https://github.com/Vignesh-411" onClick={handleClick}><i className="fab fa-github"></i><span>GITHUB</span></a>
+        <a className="linkedin" href="https://www.linkedin.com/in/vignesh-sekar-v/" onClick={handleClick}><i className="fab fa-linkedin"></i><span>LINKEDIN</span></a>
+        <a className="hashnode" href="https://vickydomain.hashnode.dev/?source=top_nav_blog_home" onClick={handleClick}><i className="fa-brands fa-hashnode"></i><span>HASHNODE</span></a>
       </div>
     </div>
   </div>

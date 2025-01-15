@@ -81,7 +81,7 @@
 .line {
   width: 2px;
   left: 50%;
-  height: 106.5vh;
+  height: 155vh;
   background: rgba(255, 255, 255, 0.1);
   top: 0;
   position: absolute;
@@ -740,9 +740,9 @@ svg {
   transform: translateX(-50%) scale(1); /* Show tooltip */
 }
 
+/* ------------------------------------------------MEDIA QUERIES FOR RIGHT FOOTER ICONS ------------------------------------------------------------------------ */
 
-
-@media (max-width: 1140px) {
+@media (max-width: 1440px) {
   .gmail > span,
   .github > span,
   .linkedin > span,
@@ -751,6 +751,8 @@ svg {
     top: 40px;
     padding: 6px 12px;
   }
+
+  
 }
 
 @media (max-width: 1024px) {
@@ -811,38 +813,55 @@ svg {
 
 }
 
-@media (max-width: 425px) {
+@media (max-width: 696px) {
+
+  .content h1{
+    font-size: 3.5rem;
+  }
+
+  .content h2{
+    font-size: 2.8rem;
+  }
+}
+
+/* ------------------------------------------------MEDIA QUERIES FOR MOBILE ------------------------------------------------ */
+
+@media (max-width: 426px) {
+
+  .content h2{
+font-size: 2rem;
+  }
    
   .gmail > span,
   .github > span,
   .linkedin > span,
   .hashnode > span {
     font-size: 9px;
-    top: 34px;
+    top: 10px;
     padding: 4px 6px;
   }
-  }
-
+  
   .social-icons{
     margin-top: 20px;
-    margin-right:70px;
+    margin-right:80px;
   }
-
+  
   .footer-title{
     font-size: 20px;
     margin-bottom: 10px;
     margin-top: 20px;
     width: 250px;
   }
-
+  
   .footer-subtitle{
     font-size: 12px;
     width: 250px;
   }
-
+  
   .footer-links-column{
     margin-bottom: 30px;
   }
+}
 
 
 @media (max-width: 375px) {
