@@ -1,20 +1,20 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "../css/Navbar.css";
 import Image from "../Images/SidebarImages/briefcase.png";
 
-const Navbar = ({ toggleSidebar }) => {
-  const [isActive, setIsActive] = useState(false);
+const Navbar = ({ isOpen, setIsOpen, toggleSidebar }) => {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0); // Track active nav link
+  const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
 
-  const navLinks = ["/", "/projects", "/about", "/contact"]; // Routes for NavLinks
+  const navLinks = ["/", "/projects", "/about", "/contact"];
 
   const handleToggle = () => {
-    setIsActive(!isActive);
+    setIsOpen(!isOpen);
   };
 
   const base64File = "";
@@ -34,13 +34,13 @@ const Navbar = ({ toggleSidebar }) => {
 
   const handleKeyDown = (event) => {
     if (event.code === "Tab" && event.shiftKey) {
-      event.preventDefault(); 
-      const nextIndex = (activeIndex + 1) % navLinks.length; 
+      event.preventDefault();
+      const nextIndex = (activeIndex + 1) % navLinks.length;
       setActiveIndex(nextIndex);
       navigate(navLinks[nextIndex]);
     } else if (event.code === "Space" && event.shiftKey) {
       event.preventDefault();
-      const prevIndex = (activeIndex - 1 + navLinks.length) % navLinks.length; 
+      const prevIndex = (activeIndex - 1 + navLinks.length) % navLinks.length;
       setActiveIndex(prevIndex);
       navigate(navLinks[prevIndex]);
     }
@@ -58,10 +58,10 @@ const Navbar = ({ toggleSidebar }) => {
   return (
     <div className="Navbar">
       <div className="set-1">
-        <div className="menu icon" onClick={toggleSidebar}>
+        <div className="menu icon">
           <div className="trigger">
             <svg
-              className={`bars ${isActive ? "active" : ""}`}
+              className={`bars ${isOpen ? "active" : ""}`}
               viewBox="0 0 100 100"
               onClick={handleToggle}
             >

@@ -72,13 +72,15 @@ const Hero = () => {
           <div
             className="text"
             style={{
-              transform: `translateX(${textPosition}%)`,
-              maskImage: `linear-gradient(to right, rgba(0, 0, 0, 1) ${fadeOpacity * 100}%, transparent)`,
+              transform: window.innerWidth <= 565 ? `translateY(${textPosition}%)` : `translateX(${textPosition}%)`,
+              maskImage: window.innerWidth <= 565
+                ? `linear-gradient(to bottom, rgba(0, 0, 0, 1) ${fadeOpacity * 100}%, transparent)`
+                : `linear-gradient(to right, rgba(0, 0, 0, 1) ${fadeOpacity * 100}%, transparent)`,
             }}
           >
             <h1>Hi!</h1>
             <p>
-              &nbsp; &nbsp; this is Vignesh, a full stack developer. I am
+              &nbsp; &nbsp; this is Vignesh , a full stack developer. I am
               passionate about creating innovative and user-friendly web
               applications. I am a quick learner and a team player. I am
               always eager to learn new technologies and expand my knowledge.
@@ -92,7 +94,7 @@ const Hero = () => {
           <div
             className="scroll-image"
             style={{
-              transform: `translateX(${imagePosition}%)`,
+              transform: window.innerWidth <= 565 ? `translateY(${imagePosition}%)` : `translateX(${imagePosition}%)`,
             }}
           ></div>
         </div>

@@ -1,4 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
+// /* eslint-disable react-hooks/exhaustive-deps */
 // import React, { useState, useEffect } from "react";
 // import "./App.css";
 // import Navbar from "./components/Navbar";
@@ -13,42 +13,31 @@
 // import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // const App = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const [navLinkClicked, setNavLinkClicked] = useState(false);
-//   const [loading, setLoading] = useState(true);
-//   const [showLandscapeMessage, setShowLandscapeMessage] = useState(false);
+//   const [isOpen, setIsOpen] = useState(false); 
+//   const [loading, setLoading] = useState(true); 
+//   const [showLandscapeMessage, setShowLandscapeMessage] = useState(false); 
 
 //   const toggleSidebar = () => {
-//     setIsOpen(!isOpen);
-//     setNavLinkClicked(true);
+//     setIsOpen((prev) => !prev);
 //   };
 
 //   const isMobileOrTablet = () => {
 //     const width = window.innerWidth;
 //     const height = window.innerHeight;
-
-//     return (
-//       (width <= 1023 && height <= 1367) || // Common tablet dimensions
-//       (width <= 768) // Mobile dimensions
-//     );
+//     return (width <= 1023 && height <= 1367) || width <= 768;
 //   };
 
 //   const checkMobileLandscape = () => {
 //     const isLandscape = window.matchMedia("(orientation: landscape)").matches;
-
-//     // Show message if the device is a mobile or tablet and in landscape mode
 //     setShowLandscapeMessage(isMobileOrTablet() && isLandscape);
 //   };
 
 //   useEffect(() => {
-//     // Initial check
 //     checkMobileLandscape();
 
-//     // Listen for orientation or resize changes
 //     window.addEventListener("resize", checkMobileLandscape);
 //     window.addEventListener("orientationchange", checkMobileLandscape);
 
-//     // Cleanup listeners on component unmount
 //     return () => {
 //       window.removeEventListener("resize", checkMobileLandscape);
 //       window.removeEventListener("orientationchange", checkMobileLandscape);
@@ -57,7 +46,7 @@
 
 //   useEffect(() => {
 //     setTimeout(() => {
-//       setLoading(false); // Simulate loader delay
+//       setLoading(false);
 //     }, 1000);
 //   }, []);
 
@@ -78,52 +67,34 @@
 //           <>
 //             <Navbar
 //               toggleSidebar={toggleSidebar}
+//               isOpen={isOpen} // Pass isOpen to Navbar
 //               navLinks={[
 //                 { to: "/", text: "Home" },
 //                 { to: "/projects", text: "Projects" },
 //                 { to: "/about", text: "About" },
 //                 { to: "/contact", text: "Contact" },
 //               ]}
-//               navLinkClicked={navLinkClicked}
 //             />
+
+//             <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
 
 //             <Routes>
 //               <Route
 //                 exact
 //                 path="/"
-//                 element={
-//                   <>
-//                     <Hero />
-//                     <Sidebar isOpen={isOpen} />
-//                   </>
-//                 }
+//                 element={<Hero />}
 //               />
 //               <Route
 //                 path="/projects"
-//                 element={
-//                   <>
-//                     <Projects toggleSidebar={toggleSidebar} />
-//                     <Sidebar isOpen={isOpen} />
-//                   </>
-//                 }
+//                 element={<Projects />}
 //               />
 //               <Route
 //                 path="/about"
-//                 element={
-//                   <>
-//                     <About toggleSidebar={toggleSidebar} />
-//                     <Sidebar isOpen={isOpen} />
-//                   </>
-//                 }
+//                 element={<About />}
 //               />
 //               <Route
 //                 path="/contact"
-//                 element={
-//                   <>
-//                     <Contact toggleSidebar={toggleSidebar} />
-//                     <Sidebar isOpen={isOpen} />
-//                   </>
-//                 }
+//                 element={<Contact />}
 //               />
 //             </Routes>
 //           </>
@@ -136,54 +107,45 @@
 // export default App;
 
 
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import Sidebar from "./components/Sidebar";
 import Loader from "./components/SkeletonLoader";
 import SwitchOrientation from "./components/SwitchOrientation";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [showLandscapeMessage, setShowLandscapeMessage] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // Sidebar open/close state
+  const [loading, setLoading] = useState(true); // Loading state
+  const [showLandscapeMessage, setShowLandscapeMessage] = useState(false); // Landscape mode message
 
   const toggleSidebar = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev); // Toggle sidebar state
   };
 
   const isMobileOrTablet = () => {
     const width = window.innerWidth;
     const height = window.innerHeight;
-
-    return (
-      (width <= 1023 && height <= 1367) || // Common tablet dimensions
-      (width <= 768) // Mobile dimensions
-    );
+    return (width <= 1023 && height <= 1367) || width <= 768;
   };
 
   const checkMobileLandscape = () => {
     const isLandscape = window.matchMedia("(orientation: landscape)").matches;
-
-    // Show message if the device is a mobile or tablet and in landscape mode
     setShowLandscapeMessage(isMobileOrTablet() && isLandscape);
   };
 
   useEffect(() => {
-    // Initial check
     checkMobileLandscape();
-
-    // Listen for orientation or resize changes
     window.addEventListener("resize", checkMobileLandscape);
     window.addEventListener("orientationchange", checkMobileLandscape);
 
-    // Cleanup listeners on component unmount
     return () => {
       window.removeEventListener("resize", checkMobileLandscape);
       window.removeEventListener("orientationchange", checkMobileLandscape);
@@ -191,9 +153,10 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoading(false); // Simulate loader delay
+    const timeout = setTimeout(() => {
+      setLoading(false);
     }, 1000);
+    return () => clearTimeout(timeout);
   }, []);
 
   if (showLandscapeMessage) {
@@ -213,6 +176,8 @@ const App = () => {
           <>
             <Navbar
               toggleSidebar={toggleSidebar}
+              isOpen={isOpen}
+              setIsOpen={setIsOpen}
               navLinks={[
                 { to: "/", text: "Home" },
                 { to: "/projects", text: "Projects" },
@@ -220,43 +185,12 @@ const App = () => {
                 { to: "/contact", text: "Contact" },
               ]}
             />
-
             <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-
             <Routes>
-              <Route
-                exact
-                path="/"
-                element={
-                  <>
-                    <Hero />
-                  </>
-                }
-              />
-              <Route
-                path="/projects"
-                element={
-                  <>
-                    <Projects />
-                  </>
-                }
-              />
-              <Route
-                path="/about"
-                element={
-                  <>
-                    <About />
-                  </>
-                }
-              />
-              <Route
-                path="/contact"
-                element={
-                  <>
-                    <Contact />
-                  </>
-                }
-              />
+              <Route exact path="/" element={<Hero />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </>
         )}

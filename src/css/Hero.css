@@ -597,33 +597,6 @@ svg {
   color: #cccccc;
   z-index: 1;
 }
-/* 
-.gmail > span {
-  visibility: hidden;
-  position: absolute;
-  background-color: #b384ff;
-  left: 76.5rem;
-  top: 34px;
-  width: 47px;
-  height: 19px;
-  border-radius: 5px;
-  font-size: 11px;
-  font-weight: 500;
-  font-family: "MyFont3";
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 8px;
-  transform: translateX(-50%) scale(0);
-  transition: transform 0.2s ease-in-out;
-}
-.gmail > button:hover {
-  cursor: pointer;
-}
-
-.gmail:hover > span {
-  visibility: visible;
-  transform: translateX(-50%) scale(1);
-} */
 
 .gmail {
   position: relative;
@@ -635,7 +608,7 @@ svg {
   position: absolute;
   background-color: #b384ff;
   color: white;
-  right: 30%; 
+  right: 30%;
   top: 5px;
   width: auto; /* Adjusts width dynamically to fit content */
   padding: 5px 10px;
@@ -664,7 +637,7 @@ svg {
   position: absolute;
   background-color: #b384ff;
   color: white;
-  right: 30%; 
+  right: 30%;
   top: 5px;
   width: auto; /* Adjusts width dynamically to fit content */
   padding: 5px 10px;
@@ -683,7 +656,7 @@ svg {
   transform: translateX(-50%) scale(1); /* Show tooltip */
 }
 
-.linkedin  {
+.linkedin {
   position: relative;
   display: inline-block;
 }
@@ -693,7 +666,7 @@ svg {
   position: absolute;
   background-color: #b384ff;
   color: white;
-  right: 10%; 
+  right: 10%;
   top: 5px;
   width: auto; /* Adjusts width dynamically to fit content */
   padding: 5px 10px;
@@ -721,7 +694,7 @@ svg {
   position: absolute;
   background-color: #b384ff;
   color: white;
-  right: -30%; 
+  right: -30%;
   top: 5px;
   width: auto; /* Adjusts width dynamically to fit content */
   padding: 5px 10px;
@@ -751,38 +724,44 @@ svg {
     top: 40px;
     padding: 6px 12px;
   }
-
-  
 }
 
 @media (max-width: 1024px) {
   .gmail > span,
   .github > span,
   .linkedin > span,
-  .hashnode > span{
+  .hashnode > span {
     top: 3px;
   }
 
-  .social-icons{
+  .social-icons {
     margin-top: 70px;
     margin-right: 20px;
   }
 
-  .footer-title{
+  .footer-title {
     font-size: 40px;
     margin-bottom: 20px;
   }
 
-  .footer-subtitle{
+  .footer-subtitle {
     font-size: 15px;
   }
 
-  .footer-links-column{
+  .footer-links-column {
     margin-bottom: 30px;
   }
 }
 
 @media (max-width: 768px) {
+  .text {
+    margin-top: 20px;
+    text-align: justify;
+  }
+
+  .text > p {
+    font-size: 14px;
+  }
   .gmail > span,
   .github > span,
   .linkedin > span,
@@ -792,46 +771,90 @@ svg {
     padding: 4px 8px;
   }
 
-  .social-icons{
+  .social-icons {
     margin-top: 20px;
     margin-right: 50px;
   }
 
-  .footer-title{
+  .footer-title {
     font-size: 30px;
     margin-bottom: 10px;
     margin-top: 20px;
   }
 
-  .footer-subtitle{
+  .footer-subtitle {
     font-size: 12px;
   }
 
-  .footer-links-column{
+  .footer-links-column {
     margin-bottom: 30px;
   }
-
 }
 
 @media (max-width: 696px) {
+  
+  .content{
+    margin-bottom: -40px;
+    margin-top: 20px;
+  }
 
-  .content h1{
+  .content h1 {
     font-size: 3.5rem;
   }
 
-  .content h2{
+  .content h2 {
     font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 565px) {
+
+  .content{
+    margin-bottom: -100px;
+    margin-top: 20px;
+  }
+
+  .contII {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100vh;
+  }
+
+  .contII .text,
+  .contII .scroll-image {
+    transform: none;
+    width: 100%;
+  }
+
+  .text > p {
+    font-size: 18px;
+    word-spacing: none;
+  }
+  .content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 488px) {
+
+  .content h2{
+    font-size: 2rem;
   }
 }
 
 /* ------------------------------------------------MEDIA QUERIES FOR MOBILE ------------------------------------------------ */
 
 @media (max-width: 426px) {
-
-  .content h2{
-font-size: 2rem;
+  .content h2 {
+    font-size: 2rem;
   }
-   
+
+  .text > p {
+    font-size: 10px;
+    word-spacing: none;
+  }
+
   .gmail > span,
   .github > span,
   .linkedin > span,
@@ -840,29 +863,42 @@ font-size: 2rem;
     top: 10px;
     padding: 4px 6px;
   }
-  
-  .social-icons{
+
+  .social-icons {
     margin-top: 20px;
-    margin-right:80px;
+    margin-right: 80px;
   }
-  
-  .footer-title{
+
+  .footer-title {
     font-size: 20px;
     margin-bottom: 10px;
     margin-top: 20px;
     width: 250px;
   }
-  
-  .footer-subtitle{
+
+  .footer-subtitle {
     font-size: 12px;
     width: 250px;
   }
-  
-  .footer-links-column{
+
+  .footer-links-column {
     margin-bottom: 30px;
   }
 }
 
+@media (max-width: 399px) {
+
+  .content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 364px) {
+
+  .content h2 {
+    font-size: 1.4rem;
+  }
+}
 
 @media (max-width: 375px) {
   .gmail > span {
