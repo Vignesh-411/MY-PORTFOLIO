@@ -144,7 +144,7 @@ const Projects = () => {
           >
             <img src={Weather} alt="next" />
             <div className="overlay">
-              <h1>Weather Apploicatiion</h1>
+              <h1>Weather Applicatiion</h1>
             </div>
           </div>
           <div

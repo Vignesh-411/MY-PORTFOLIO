@@ -881,8 +881,17 @@ svg {
     width: 250px;
   }
 
+  .footer-links{
+    width: 10px;
+  }
+  
   .footer-links-column {
     margin-bottom: 30px;
+    margin-right: 0px;
+  }
+
+  .footer-links-column > a{
+    width: 120px;
   }
 }
 
