@@ -836,6 +836,12 @@ svg {
   }
 }
 
+@media (max-width: 515px) {
+  .social-icons {
+    margin-right: 80px;
+  }
+}
+
 @media (max-width: 488px) {
 
   .content h2{
