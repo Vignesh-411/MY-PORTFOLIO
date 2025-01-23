@@ -422,7 +422,7 @@
   
 }
 
-@media (max-width: 430px) {
+@media (max-width: 640px) {
   .loader-container {
     display: none;    
   }
