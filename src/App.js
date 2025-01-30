@@ -13,12 +13,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const App = () => {
-  const [isOpen, setIsOpen] = useState(false); // Sidebar open/close state
-  const [loading, setLoading] = useState(true); // Loading state
-  const [showLandscapeMessage, setShowLandscapeMessage] = useState(false); // Landscape mode message
+  const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(true); 
+  const [showLandscapeMessage, setShowLandscapeMessage] = useState(false); 
 
   const toggleSidebar = () => {
-    setIsOpen((prev) => !prev); // Toggle sidebar state
+    setIsOpen((prev) => !prev); 
   };
 
   const isMobileOrTablet = () => {
