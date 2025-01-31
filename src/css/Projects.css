@@ -180,6 +180,25 @@
   color: white;
 }
 
+@media (max-width: 430px) {
+  .items .button-container {
+    gap: 320px;
+  }
+
+  .items .item {
+    width: 370px;
+    height: 370px;
+  }
+
+  .item.prev,
+  .item.next,
+  .item.prev-side,
+  .item.next-side {
+    width: 270px;
+    height: 270px;
+  }
+
+}
 @media (max-width: 390px) {
   .items .button-container {
     gap: 280px;
