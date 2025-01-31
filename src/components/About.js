@@ -36,36 +36,18 @@ const About = () => {
                 alt="html"
               />
               <p>
-                lorem ipsum dolor sit amet, consect id elit, sed diam nonum et
-                justo ut aliquet et justo e shallow et aliquetlorem ipsum dolor
-                sit amet, consect id elit, sed diam nonum et justo ut aliquet et
-                justo e shallow et aliquetlorem ipsum dolor sit amet, consect id
-                elit, sed diam nonum et justo ut aliquet et justo e shallow et
-                aliquetlorem ipsum dolor sit amet, consect id elit, sed diam
-                nonum et justo ut aliquet et justo e shallow et aliquetlorem
-                ipsum dolor sit amet, consect id elit, sed diam nonum et justo
-                ut aliquet et justo e shallow et aliquet
+               The HyperText Markup Language, or HTML is the standard markup language for creating web pages and web applications. I have used this programming language to create many different stream of web applications in my projects , and also used many properties of the HTML for various purposes. 
               </p>
             </div>
-            <div className="tailwindcss-container">
-              <div className="tailwindcss">
-                <img
-                  src="https://balticanebula.com/content/images/2023/06/plus-tailwind.jpg"
-                  className="tailwindcssimg"
-                  alt="tailwindcss"
-                />
-                <p>
-                  lorem ipsum dolor sit amet, consect id elit, sed diam nonum et
-                  justo ut aliquet et justo e shallow et aliquetlorem ipsum
-                  dolor sit amet, consect id elit, sed diam nonum et justo ut
-                  aliquet et justo e shallow et aliquetlorem ipsum dolor sit
-                  amet, consect id elit, sed diam nonum et justo ut aliquet et
-                  justo e shallow et aliquetlorem ipsum dolor sit amet, consect
-                  id elit, sed diam nonum et justo ut aliquet et justo e shallow
-                  et aliquetlorem ipsum dolor sit amet, consect id elit, sed
-                  diam nonum et justo ut aliquet et justo e shallow et aliquet
-                </p>
-              </div>
+            <div className="tailwind-container">
+              <img
+                src="https://wallpaperaccess.com/full/9147315.png"
+                className="tailwind-image"
+                alt="tailwind"
+              />
+              <p>
+               The HyperText Markup Language, or HTML is the standard markup language for creating web pages and web applications. I have used this programming language to create many different stream of web applications in my projects , and also used many properties of the HTML for various purposes. 
+              </p>
             </div>
             <div className="react-container">
               <div className="react">

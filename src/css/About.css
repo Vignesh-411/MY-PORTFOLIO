@@ -227,3 +227,7 @@ p {
   height: 80%;
   position: absolute;
 }
+
+.html-container p{
+  font-size: 17px;
+}
