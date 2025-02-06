@@ -11,7 +11,7 @@
 .About-Content {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Allows main content to grow and push marquee to the bottom */
+  flex: 1;
 }
 
 .About::before {
@@ -31,33 +31,14 @@
 }
 
 .About-Container {
-  flex: 1; /* Ensures main content takes up available space */
+  flex: 1;
   padding: 20px;
   z-index: 1;
 }
 
-
-::-webkit-scrollbar {
-  padding-top: 10px;
-  width: 6px;
-  transition: opacity 0.3s;
-  opacity: 1;
-  background-color: #0d0d0d;
-}
-::-webkit-scrollbar-track {
-  margin-top: 55px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 255, 255);
-  border-radius: 30px;
-}
-
-::-webkit-scrollbar-thumb:active {
-  background-color: #000000;
-}
 .glide {
-  border-bottom: 10px solid rgb(255, 255, 255);
+  width: 98%;
+  margin: auto;
 }
 :root {
   --marquee-width: 100%;
@@ -74,30 +55,14 @@
   height: calc(
     100% - var(--marquee-elements-displayed) * var(--marquee-height)
   );
-  background-color: transparent;
-  color: white;
+  background-image: url("https://i.gifer.com/origin/85/856de846e59271089eca26c4260c9bdb_w200.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000000;
   overflow: hidden;
   position: relative;
-}
-
-.marquee:before,
-.marquee:after {
-  position: absolute;
-  top: 0;
-  width: 1rem;
-  height: 100%;
-  content: "";
-  z-index: 1;
-}
-
-.marquee:before {
-  left: 0;
-  background: linear-gradient(to right, #111 0%, transparent 100%);
-}
-
-.marquee:after {
-  right: 0;
-  background: linear-gradient(to left, #111 0%, transparent 100%);
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .marquee-content {
@@ -122,13 +87,13 @@
 
 .marquee-content li {
   display: flex;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   width: var(--marquee-element-width);
   max-height: 100%;
   font-size: calc(var(--marquee-height) * 3 / 4);
-  margin-bottom: 20px;
 }
 
 .Head2 {
@@ -142,12 +107,10 @@
   margin-left: -150px;
 }
 
-  .About-Description {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
-  }
+.About-Description {
+  gap: 1.5rem;
+  padding: 1rem;
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 
@@ -191,28 +154,52 @@ p {
   font-weight: 500;
 }
 
-.html-container{
-  width: 50%;
-  background-color: white;  
+.About-Description {
+  height: 180vh;
+  width: 100%;
+  margin-bottom: 10px;
+  background-image: url("https://i.pinimg.com/originals/19/51/12/19511217715fbb1a635d021fc1117342.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* -------------------------------------------------------------- html container ------------------------------------------------------------------------------------ */
+
+.html-container {
+  width: 37%;
+  background-color: #ec5b24;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  height: 400px;
-  transition: transform 0.3s ease-in-out , border-radius 0.1s ease-in-out;
+  height: 300px;
+  transition: transform 0.3s ease-in-out, border-radius 0.1s ease-in-out,
+    background-color 0.2s ease-in-out;
+  animation: shadow-drop-2-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.html-container > p{
-  color: black;
-  margin-top:320px ;
-
+.html-container > p {
+  color: white;
+  margin-top: 240px;
+  font-family: "myfont2";
+  transition: opacity 0.3s ease-in-out;
 }
 
-.html-container:hover{
-  background-color: black;
+.html-container p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.html-container:hover {
   border-radius: 20px;
-  
+  background-color: black;
 }
-.html-container:hover .html-image{
+
+.html-container:hover p {
+  opacity: 0;
+  background-color: #a7431a;
+}
+
+.html-container:hover .html-image {
   opacity: 0.7;
   transform: scale(1.4);
   cursor: pointer;
@@ -220,14 +207,787 @@ p {
   margin-top: 20px;
 }
 
-.html-image{
-  transition: transform 0.3s ease-in-out , margin-top 0.3s ease-in-out ;
-
+.html-image {
+  transition: transform 0.3s ease-in-out, margin-top 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
   width: 100%;
   height: 80%;
   position: absolute;
 }
 
-.html-container p{
-  font-size: 17px;
+/* -------------------------------------------------------------- tailwind container ------------------------------------------------------------------------------------ */
+
+.tailwind-container {
+  width: 35%;
+  height: 380px;
+  margin-top: -300px;
+  margin-left: 565px;
+  background-image: url("../Images/tllogo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out, border-radius 0.1s ease-in-out;
+}
+
+.tailwind-container > p {
+  color: white;
+  margin-top: 310px;
+  font-family: "myfont2";
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tailwind-container p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.tailwind-container:hover {
+  border-radius: 20px;
+  background-color: black;
+}
+
+.tailwind-container:hover p {
+  opacity: 0;
+}
+
+.tailwind-container:hover .tailwind-image {
+  opacity: 0.7;
+  transform: scale(1.4);
+  cursor: pointer;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+.tailwind-image {
+  transition: transform 0.3s ease-in-out, margin-top 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+}
+
+/* -------------------------------------------------------------- react container ------------------------------------------------------------------------------------ */
+
+.react-container {
+  width: 38%;
+  height: 380px;
+  margin-top: -320px;
+  margin-left: 460px;
+  background-color: #212830;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out, border-radius 0.1s ease-in-out;
+}
+
+.react-container > p {
+  color: white;
+  margin-top: 310px;
+  font-family: "myfont2";
+  transition: opacity 0.3s ease-in-out;
+}
+
+.react-container p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.react-container:hover {
+  border-radius: 20px;
+  background-color: #212830;
+}
+
+.react-container:hover p {
+  opacity: 0;
+}
+
+.react-container:hover .react-image {
+  opacity: 0.7;
+  transform: scale(2);
+  cursor: pointer;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+.react-image {
+  transition: transform 0.3s ease-in-out, margin-top 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+}
+
+/* -------------------------------------------------------------- js container ------------------------------------------------------------------------------------ */
+
+.js-container {
+  width: 30%;
+  height: 400px;
+  margin-top: -140px;
+  background-color: #f0db4f;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out, border-radius 0.1s ease-in-out;
+}
+
+.js-container > p {
+  color: #000000;
+  margin-top: 319px;
+  font-family: "myfont2";
+  transition: opacity 0.3s ease-in-out;
+}
+
+.js-container p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.js-container:hover {
+  border-radius: 20px;
+  background-color: black;
+}
+
+.js-container:hover p {
+  opacity: 0;
+}
+
+.js-container:hover .js-image {
+  opacity: 0.7;
+  transform: scale(1.4);
+  margin-left: -60px;
+  cursor: pointer;
+  z-index: 2;
+  margin-top: 20px;
+}
+
+.js-image {
+  transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+}
+
+/* -------------------------------------------------------------- java container ------------------------------------------------------------------------------------ */
+
+.java-container {
+  width: 31%;
+  height: 430px;
+  margin-top: -310px;
+  margin-left: 1040px;
+  background-image: url("../Images/javalogo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out, border-radius 0.1s ease-in-out;
+}
+
+.java-container > p {
+  color: white;
+  margin-top: 345px;
+  font-family: "myfont2";
+  transition: opacity 0.3s ease-in-out;
+}
+
+.java-container p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.java-container:hover {
+  border-radius: 20px;
+  background-color: black;
+}
+
+.java-container:hover p {
+  opacity: 0;
+}
+
+.java-container:hover .java-image {
+  opacity: 0.7;
+  transform: scale(1.4);
+  cursor: pointer;
+  z-index: 2;
+  margin-top: 40px;
+}
+
+.java-image {
+  transition: transform 0.3s ease-in-out, margin 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+}
+
+/* -------------------------------------------------------------- sql container ------------------------------------------------------------------------------------ */
+
+.sql-container {
+  width: 27%;
+  height: 450px;
+  margin-top: -380px;
+  margin-left: 1100px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out, border-radius 0.1s ease-in-out;
+}
+
+.sql-container > p {
+  color: #000000;
+  margin-top: 365px;
+  font-family: "myfont2";
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sql-container p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.sql-container:hover {
+  border-radius: 20px;
+  background-color: #000000;
+}
+
+.sql-container:hover p {
+  opacity: 0;
+}
+
+.sql-container:hover .sql-image {
+  opacity: 0.7;
+  transform: scale(1.4);
+  cursor: pointer;
+  z-index: 2;
+  margin-top: 50px;
+}
+
+.sql-image {
+  transition: transform 0.3s ease-in-out, margin-top 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+}
+
+/* -------------------------------------------------------------- springboot container ------------------------------------------------------------------------------------ */
+
+.springboot-container {
+  width: 42%;
+  height: 400px;
+  margin-left: 875px;
+  margin-top: 10px;
+  background-image: url("../Images/spring-logo.png");
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out, border-radius 0.1s ease-in-out,
+    margin 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.springboot-container > p {
+  color: white;
+  margin-top: 325px;
+  font-family: "myfont2";
+  transition: opacity 0.3s ease-in-out;
+}
+
+.springboot-container p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.springboot-container:hover {
+  border-radius: 20px;
+  background-color: black;
+  background-size: cover;
+}
+
+.springboot-container:hover p {
+  opacity: 0;
+}
+
+.springboot-container:hover .springboot-image {
+  opacity: 0.7;
+  transform: scale(1.8);
+  cursor: pointer;
+  z-index: 2;
+  margin-top: 50px;
+}
+
+.springboot-image {
+  transition: transform 0.3s ease-in-out, margin-top 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+}
+
+/* -------------------------------------------------------------- github container ------------------------------------------------------------------------------------ */
+
+.github-container {
+  width: 26%;
+  height: 450px;
+  margin-top: -580px;
+  background-color: #1b1f23;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out, border-radius 0.1s ease-in-out;
+}
+
+.github-container > p {
+  color: white;
+  margin-top: 365px;
+  font-family: "myfont2";
+  transition: opacity 0.3s ease-in-out;
+}
+
+.github-container p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.github-container:hover {
+  border-radius: 20px;
+  background-color: black;
+}
+
+.github-container:hover p {
+  opacity: 0;
+}
+
+.github-container:hover .github-image {
+  opacity: 0.7;
+  transform: scale(1.4);
+  cursor: pointer;
+  z-index: 2;
+  margin-top: 50px;
+}
+
+.github-image {
+  transition: transform 0.3s ease-in-out, margin-top 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+}
+
+/* -------------------------------------------------------------- codepen container ------------------------------------------------------------------------------------ */
+
+.codepen-container {
+  width: 31%;
+  height: 450px;
+  margin-top: -390px;
+  margin-left: 400px;
+  background-color: #131313;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out, border-radius 0.1s ease-in-out;
+}
+
+.codepen-container > p {
+  color: white;
+  margin-top: 370px;
+  font-family: "myfont2";
+  transition: opacity 0.3s ease-in-out;
+}
+
+.codepen-container p {
+  font-size: 12px;
+  text-align: center;
+}
+
+.codepen-container:hover {
+  border-radius: 20px;
+  background-color: black;
+}
+
+.codepen-container:hover p {
+  opacity: 0;
+}
+
+.codepen-container:hover .codepen-image {
+  opacity: 0.7;
+  transform: scale(1.4);
+  cursor: pointer;
+  z-index: 2;
+  margin-top: 65px;
+}
+
+.codepen-image {
+  transition: transform 0.3s ease-in-out, margin-top 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+  width: 100%;
+  height: 80%;
+  position: absolute;
+}
+
+@media (max-width: 1445px) {
+  .tailwind-container {
+    margin-left: 530px;
+  }
+
+  .sql-container {
+    margin-left: 1030px;
+  }
+
+  .react-container {
+    margin-left: 430px;
+  }
+
+  .java-container {
+    margin-left: 975px;
+  }
+
+  .codepen-container {
+    margin-left: 375px;
+  }
+
+  .springboot-container {
+    margin-left: 820px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .About-Description {
+    height: 143vh;
+  }
+  .html-container {
+    height: 200px;
+  }
+  .html-container > p {
+    margin-top: 165px;
+    font-size: 8px;
+  }
+  .tailwind-container {
+    margin-left: 375px;
+    margin-top: -200px;
+    height: 250px;
+  }
+  .tailwind-container > p {
+    margin-top: 205px;
+    font-size: 8px;
+  }
+
+  .sql-container {
+    margin-left: 730px;
+    margin-top: -250px;
+    height: 300px;
+  }
+  .sql-container:hover .sql-image {
+    margin-top: 15px;
+  }
+
+  .js-container {
+    height: 290px;
+    margin-top: -95px;
+  }
+  .js-container:hover .js-image {
+    margin-left: -45px;
+  }
+  .react-container {
+    margin-left: 305px;
+    margin-top: -240px;
+    height: 250px;
+  }
+
+  .java-container {
+    margin-left: 690px;
+    height: 300px;
+    margin-top: -200px;
+  }
+
+  .github-container {
+    height: 310px;
+    margin-top: -410px;
+  }
+  .codepen-container {
+    margin-left: 265px;
+    margin-top: -300px;
+    height: 300px;
+  }
+
+  .springboot-container {
+    margin-left: 580px;
+    height: 300px;
+    margin-top: 5px;
+  }
+  .js-container > p {
+    margin-top: 240px;
+    font-size: 8px;
+  }
+
+  .react-container > p {
+    margin-top: 205px;
+    font-size: 8px;
+  }
+
+  .java-container > p,
+  .sql-container > p,
+  .github-container > p,
+  .codepen-container > p,
+  .springboot-container > p {
+    font-size: 8px;
+    margin-top: 250px;
+  }
+
+  .marquee {
+    margin-bottom: 10px;
+  }
+
+  .Head2 {
+    font-size: 13px;
+    margin-left: -125px;
+  }
+}
+
+@media (max-width: 780px) {
+  .About-Description {
+    height: 175vh;
+  }
+  .html-container {
+    height: 190px;
+    width: 51%;
+    margin-left: -1.5%;
+  }
+  .html-container > p {
+    margin-top: 155px;
+    font-size: 7px;
+  }
+  .tailwind-container {
+    margin-left: 315px;
+    margin-top: -190px;
+    height: 230px;
+    width: 51%;
+  }
+  .tailwind-container > p {
+    margin-top: 188px;
+    font-size: 7px;
+  }
+
+  .sql-container {
+    margin-left: -10px;
+    margin-top: -35px;
+    height: 300px;
+    width: 41%;
+  }
+  .sql-container:hover .sql-image {
+    margin-top: 30px;
+  }
+
+  .js-container {
+    height: 305px;
+    width: 44%;
+    margin-top: 5px;
+    margin-left: -10px;
+  }
+  .js-container:hover .js-image {
+    margin-left: -35px;
+  }
+  .react-container {
+    margin-left: 253px;
+    margin-top: -570px;
+    height: 260px;
+    width: 61%;
+  }
+
+  .java-container {
+    margin-left: 690px;
+    height: 300px;
+    margin-top: -200px;
+  }
+
+  .github-container {
+    height: 310px;
+    margin-top: -280px;
+    margin-left: -10px;
+    width: 43%;
+  }
+  .codepen-container {
+    margin-left: 275px;
+    margin-top: -617px;
+    height: 300px;
+    width: 57.2%;
+  }
+
+  .codepen-container:hover .codepen-image{
+    margin-top: 40px;
+  }
+
+  .springboot-container {
+    margin-left: 260px;
+    height: 280px;
+    margin-top: 215px;
+    width: 60%;
+  }
+  .js-container > p {
+    margin-top: 250px;
+    font-size: 8px;
+  }
+
+  .react-container > p {
+    margin-top: 210px;
+    font-size: 8px;
+  }
+
+  .java-container > p {
+    font-size: 8px;
+    margin-top: 250px;
+  }
+  .sql-container > p {
+    font-size: 8px;
+    margin-top:240px;
+  }
+  .github-container > p {
+    font-size: 8px;
+    margin-top: 250px;
+  } 
+  .codepen-container > p {
+    font-size: 8px;
+    margin-top: 250px;
+  }
+  .springboot-container > p {
+    font-size: 8px;
+    margin-top: 230px;
+  }
+
+  .marquee {
+    margin-bottom: 10px;
+  }
+
+  .Head2 {
+    font-size: 11px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 480px) {
+  .About-Description {
+    height: 400vh;
+  }
+  .html-container {
+    height: 12%;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .html-container > p {
+    margin-top: 175px;
+    font-size: 8px;
+  }
+  .tailwind-container {
+    margin-left: 0px;
+    margin-top: 10px;
+    height: 16%;
+    width: 100%;
+  }
+  .tailwind-container > p {
+    margin-top: 238px;
+    font-size: 8px;
+  }
+
+  .sql-container {
+    margin-left: 40px;
+    margin-top: 285px;
+    height:14%;
+    width: 80%;
+
+  }
+  .sql-container:hover .sql-image {
+    margin-top: 30px;
+  }
+
+  .js-container {
+    height: 305px;
+    width: 80%;
+    margin-top:10px;
+    margin-left: 40px;
+  }
+  .js-container:hover .js-image {
+    margin-left: -35px;
+  }
+  .react-container {
+    margin-left:0px;
+    margin-top: -935px;
+    height: 260px;
+    width: 100%;
+  }
+
+  .java-container {
+    margin-left: 690px;
+    height: 300px;
+    margin-top: -200px;
+  }
+
+  .github-container {
+    height: 15%;
+    margin-top: -280px;
+    margin-left: 40px;
+    width: 80%;
+  }
+  .codepen-container {
+    margin-left: 275px;
+    margin-top: -17px;
+    height: 300px;
+    width: 57.2%;
+  }
+
+  .codepen-container:hover .codepen-image{
+    margin-top: 40px;
+  }
+
+  .springboot-container {
+    margin-left: 260px;
+    height: 280px;
+    margin-top: 585px;
+    width: 60%;
+  }
+  .js-container > p {
+    margin-top: 250px;
+    font-size: 8px;
+  }
+
+  .react-container > p {
+    margin-top: 210px;
+    font-size: 8px;
+  }
+
+  .java-container > p {
+    font-size: 8px;
+    margin-top: 250px;
+  }
+  .sql-container > p {
+    font-size: 8px;
+    margin-top: 300px;
+  }
+  .github-container > p {
+    font-size: 8px;
+    margin-top: 330px;
+  } 
+  .codepen-container > p {
+    font-size: 8px;
+    margin-top: 250px;
+  }
+  .springboot-container > p {
+    font-size: 8px;
+    margin-top: 230px;
+  }
+
+  .marquee {
+    margin-bottom: 10px;
+  }
+
+  .Head2 {
+    font-size: 11px;
+    margin-left: 0px;
+  }
 }

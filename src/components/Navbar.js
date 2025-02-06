@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "../css/Navbar.css";
 import Image from "../Images/SidebarImages/briefcase.png";
 
-const Navbar = ({ isOpen, setIsOpen, toggleSidebar }) => {
+const Navbar = ({ isOpen, setIsOpen }) => {
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
