@@ -1,7 +1,6 @@
 .About {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   background-color: #0d0d0d;
   position: relative;
   overflow: hidden;
@@ -34,6 +33,12 @@
   flex: 1;
   padding: 20px;
   z-index: 1;
+}
+
+.About-Description {
+  gap: 1.5rem;
+  padding: 1rem;
+  height: auto;
 }
 
 .glide {
@@ -107,10 +112,7 @@
   margin-left: -150px;
 }
 
-.About-Description {
-  gap: 1.5rem;
-  padding: 1rem;
-}
+
 
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
 
@@ -159,8 +161,8 @@ p {
   width: 100%;
   margin-bottom: 10px;
   background-image: url("https://i.pinimg.com/originals/19/51/12/19511217715fbb1a635d021fc1117342.gif");
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  background-size: contain;
 }
 
 /* -------------------------------------------------------------- html container ------------------------------------------------------------------------------------ */
@@ -634,6 +636,10 @@ p {
 }
 
 @media (max-width: 1445px) {
+  /* .About-Description {
+    height: 174vh;
+  } */
+
   .tailwind-container {
     margin-left: 530px;
   }
@@ -660,9 +666,9 @@ p {
 }
 
 @media (max-width: 1030px) {
-  .About-Description {
+  /* .About-Description {
     height: 143vh;
-  }
+  } */
   .html-container {
     height: 200px;
   }
@@ -753,9 +759,11 @@ p {
 }
 
 @media (max-width: 780px) {
-  .About-Description {
+
+  /* .About-Description {
     height: 175vh;
-  }
+  } */
+
   .html-container {
     height: 190px;
     width: 51%;
@@ -785,6 +793,10 @@ p {
   .sql-container:hover .sql-image {
     margin-top: 30px;
   }
+  .sql-container > p {
+    font-size: 8px;
+    margin-top: 240px;
+  }
 
   .js-container {
     height: 305px;
@@ -795,34 +807,9 @@ p {
   .js-container:hover .js-image {
     margin-left: -35px;
   }
-  .react-container {
-    margin-left: 253px;
-    margin-top: -570px;
-    height: 260px;
-    width: 61%;
-  }
-
-  .java-container {
-    margin-left: 690px;
-    height: 300px;
-    margin-top: -200px;
-  }
-
-  .github-container {
-    height: 310px;
-    margin-top: -280px;
-    margin-left: -10px;
-    width: 43%;
-  }
-  .codepen-container {
-    margin-left: 275px;
-    margin-top: -617px;
-    height: 300px;
-    width: 57.2%;
-  }
-
-  .codepen-container:hover .codepen-image{
-    margin-top: 40px;
+  .js-container > p {
+    margin-top: 250px;
+    font-size: 8px;
   }
 
   .springboot-container {
@@ -831,35 +818,56 @@ p {
     margin-top: 215px;
     width: 60%;
   }
-  .js-container > p {
-    margin-top: 250px;
+  .springboot-container > p {
     font-size: 8px;
+    margin-top: 230px;
   }
 
+  .react-container {
+    margin-left: 253px;
+    margin-top: -570px;
+    height: 260px;
+    width: 61%;
+  }
   .react-container > p {
     margin-top: 210px;
     font-size: 8px;
   }
 
+  .java-container {
+    margin-left: 60px;
+    height: 300px;
+    margin-top: 5px;
+  }
   .java-container > p {
     font-size: 8px;
     margin-top: 250px;
   }
-  .sql-container > p {
-    font-size: 8px;
-    margin-top:240px;
+
+  .github-container {
+    height: 310px;
+    margin-top: -280px;
+    margin-left: -10px;
+    width: 43%;
   }
   .github-container > p {
     font-size: 8px;
     margin-top: 250px;
-  } 
+  }
+
+  .codepen-container {
+    margin-left: 275px;
+    margin-top: -617px;
+    height: 300px;
+    width: 57.2%;
+  }
   .codepen-container > p {
     font-size: 8px;
     margin-top: 250px;
   }
-  .springboot-container > p {
-    font-size: 8px;
-    margin-top: 230px;
+
+  .codepen-container:hover .codepen-image {
+    margin-top: 40px;
   }
 
   .marquee {
@@ -871,12 +879,14 @@ p {
     margin-left: 0px;
   }
 }
+
 @media (max-width: 480px) {
-  .About-Description {
-    height: 400vh;
-  }
+  /* .About-Description {
+    height: 380vh;
+  } */
+
   .html-container {
-    height: 12%;
+    height: 220px;
     width: 100%;
     margin-left: 0px;
   }
@@ -887,7 +897,7 @@ p {
   .tailwind-container {
     margin-left: 0px;
     margin-top: 10px;
-    height: 16%;
+    height: 280px;
     width: 100%;
   }
   .tailwind-container > p {
@@ -898,9 +908,8 @@ p {
   .sql-container {
     margin-left: 40px;
     margin-top: 285px;
-    height:14%;
+    height: 14%;
     width: 80%;
-
   }
   .sql-container:hover .sql-image {
     margin-top: 30px;
@@ -909,15 +918,15 @@ p {
   .js-container {
     height: 305px;
     width: 80%;
-    margin-top:10px;
+    margin-top: 10px;
     margin-left: 40px;
   }
   .js-container:hover .js-image {
     margin-left: -35px;
   }
   .react-container {
-    margin-left:0px;
-    margin-top: -935px;
+    margin-left: 0px;
+    margin-top: -930px;
     height: 260px;
     width: 100%;
   }
@@ -930,26 +939,26 @@ p {
 
   .github-container {
     height: 15%;
-    margin-top: -280px;
+    margin-top: -970px;
     margin-left: 40px;
     width: 80%;
   }
   .codepen-container {
-    margin-left: 275px;
-    margin-top: -17px;
+    margin-left: 40px;
+    margin-top: 10px;
     height: 300px;
-    width: 57.2%;
+    width: 80%;
   }
 
-  .codepen-container:hover .codepen-image{
+  .codepen-container:hover .codepen-image {
     margin-top: 40px;
   }
 
   .springboot-container {
-    margin-left: 260px;
+    margin-left: 0px;
     height: 280px;
-    margin-top: 585px;
-    width: 60%;
+    margin-top: 1295px;
+    width: 100%;
   }
   .js-container > p {
     margin-top: 250px;
@@ -972,7 +981,130 @@ p {
   .github-container > p {
     font-size: 8px;
     margin-top: 330px;
-  } 
+  }
+  .codepen-container > p {
+    font-size: 8px;
+    margin-top: 250px;
+  }
+  .springboot-container > p {
+    font-size: 8px;
+    margin-top: 230px;
+  }
+
+  .marquee {
+    margin-bottom: 10px;
+  }
+
+  .Head2 {
+    font-size: 11px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 330px) {
+  /* .About-Description {
+    height: 375vh;
+  } */
+
+  .html-container {
+    height: 180px;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .html-container > p {
+    margin-top: 147px;
+    font-size: 7px;
+  }
+  .tailwind-container {
+    margin-left: 0px;
+    margin-top: 10px;
+    height: 230px;
+    width: 100%;
+  }
+  .tailwind-container > p {
+    margin-top: 187px;
+    font-size: 7px;
+  }
+
+  .sql-container {
+    margin-left: 40px;
+    margin-top: 240px;
+    height: 280px;
+    width: 80%;
+  }
+
+  .sql-container > p {
+    font-size: 8px;
+    margin-top: 225px;
+  }
+
+  .js-container {
+    height: 285px;
+    width: 82%;
+    margin-top: 10px;
+    margin-left: 38px;
+  }
+  .js-container:hover .js-image {
+    margin-left: -30px;
+  }
+
+  .js-container > p {
+    margin-top: 230px;
+    font-size: 8px;
+  }
+
+  .react-container {
+    margin-left: 0px;
+    margin-top: -805px;
+    height: 220px;
+    width: 100%;
+  }
+
+  .java-container {
+    margin-left: 0px;
+    height: 300px;
+    margin-top: 200px;
+  }
+
+  .github-container {
+    height: 250px;
+    margin-top: -970px;
+    margin-left: 40px;
+    width: 80%;
+  }
+
+  .codepen-container {
+    margin-left: 40px;
+    margin-top: 10px;
+    height: 220px;
+    width: 80%;
+  }
+
+  .codepen-container:hover .codepen-image {
+    margin-top: 40px;
+  }
+
+  .springboot-container {
+    margin-left: 0px;
+    height: 280px;
+    margin-top: 1295px;
+    width: 100%;
+  }
+
+  .react-container > p {
+    margin-top: 177px;
+    font-size: 7px;
+  }
+
+  .java-container > p {
+    font-size: 8px;
+    margin-top: 250px;
+  }
+
+  .github-container > p {
+    font-size: 8px;
+    margin-top: 330px;
+  }
   .codepen-container > p {
     font-size: 8px;
     margin-top: 250px;

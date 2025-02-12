@@ -1,39 +1,205 @@
 .Contact {
   width: 100%;
-  background-position: center;
+  height: 100vh;
+  background-color: #0d0d0d;
+  opacity: 0.9;
   position: relative;
-  margin-top: 55px;
-  overflow-y: hidden;
-  background-color: #0d0d0d;
+  margin-top: 40px;
 }
 
-.Contact-Container {
-  overflow-y: auto;
+.Contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  box-sizing: border-box;
+  background-image: url("../Images/BackgroundImages/wallpaper8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.3;
+  background-attachment: fixed;
+  z-index: -1;
+}
+
+.contact-container {
+  position: relative;
   color: white;
-  margin-top: 0px;
-  padding: 0px;
+  z-index: 1;
+  box-sizing: border-box;
+  padding: 32px;
+  /* margin-top: 80px; */
 }
 
-
- ::-webkit-scrollbar {
-  padding-top: 10px;
-  width: 6px;
-  transition: opacity 0.3s; 
-  opacity: 1;
-  background-color: #0d0d0d;
-}
-::-webkit-scrollbar-track{
-  margin-top: 55px;
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 16px;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 255, 255);
-  border-radius: 30px;
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
 }
 
-::-webkit-scrollbar-thumb:active {
-  background-color: #000000;
-} 
+.contact-form-section {
+  padding: 32px;
+  background-color: rgba(26, 32, 44, 0.9);
+  color: white;
+  border-radius: 12px;
+}
 
+.contact-title {
+  font-size: 24px;
+}
+
+.highlight {
+  color: #ffc107;
+}
+
+.contact-description {
+  font-size: 14px;
+  color: #cbd5e0;
+  margin-top: 16px;
+}
+
+.input-group {
+  margin-top: 32px;
+}
+
+.input-field,
+.textarea-field {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  color: white;
+  border: 0;
+  border-bottom: 1px solid #cbd5e0;
+  outline: none;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.submit-button {
+  background-color: #ffc107;
+  color: #1a202c;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.button-icon {
+  margin-right: 8px;
+}
+
+.contact-info {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffc107;
+}
+
+.map-container {
+  position: relative;
+  height: 800px;
+}
+
+.map-frame {
+  width: 100%;
+  height: 160%;
+  border: none;
+  z-index: 1;
+}
+
+.contact-form-section {
+  padding: 16px;
+}
+
+.input-field,
+.textarea-field {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 16px;
+}
+
+@media (min-width: 768px) {
+  .map-container {
+    height: 350px;
+  }
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+.contact-form-section {
+  padding: 16px;
+}
+
+.contact-title {
+  font-size: 22px;
+}
+
+.contact-description {
+  font-size: 14px;
+}
+
+.submit-button {
+  font-size: 16px;
+}
+
+.input-field,
+.textarea-field {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.input-row {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .input-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.map-container {
+  height: 250px;
+}
+
+@media (min-width: 768px) {
+  .map-container {
+    height: 350px;
+  }
+}
