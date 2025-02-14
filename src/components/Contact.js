@@ -1,12 +1,34 @@
-// import React from "react";
+// import React, { useState, useEffect } from "react";
 // import "../css/Contact.css";
-// import { useState, useEffect } from "react";
 
 // const Contact = () => {
 //   const [mapUrl, setMapUrl] = useState(
 //     "https://maps.google.com/maps?q=manhattan&t=&z=13&ie=UTF8&iwloc=&output=embed"
 //   );
- 
+//   const [result, setResult] = React.useState("");
+
+//   const onSubmit = async (event) => {
+//     event.preventDefault();
+//     setResult("Sending....");
+//     const formData = new FormData(event.target);
+
+//     formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+//     const response = await fetch("https://api.web3forms.com/submit", {
+//       method: "POST",
+//       body: formData
+//     });
+
+//     const data = await response.json();
+
+//     if (data.success) {
+//       setResult("Form Submitted Successfully");
+//       event.target.reset();
+//     } else {
+//       console.log("Error", data);
+//       setResult(data.message);
+//     }
+//   };
 //   useEffect(() => {
 //     if (navigator.geolocation) {
 //       navigator.geolocation.getCurrentPosition(
@@ -23,8 +45,9 @@
 //       console.error("Geolocation is not supported by this browser.");
 //     }
 //   }, []);
+
 //   return (
-//     <div calssname="Contact">
+//     <div className="Contact">
 //       <div className="contact-container">
 //         <div className="contact-grid">
 //           <div className="contact-form-section">
@@ -94,33 +117,6 @@
 //                 Send Message
 //               </button>
 //             </form>
-
-//             <ul className="contact-info">
-//               <li className="info-item">
-//                 <svg
-//                   xmlns="http://www.w3.org/2000/svg"
-//                   width="16px"
-//                   height="16px"
-//                   fill="currentColor"
-//                   viewBox="0 0 479.058 479.058"
-//                 >
-//                   <path d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912z" />
-//                 </svg>
-//                 <span>info@example.com</span>
-//               </li>
-//               <li className="info-item">
-//                 <svg
-//                   xmlns="http://www.w3.org/2000/svg"
-//                   width="16px"
-//                   height="16px"
-//                   fill="currentColor"
-//                   viewBox="0 0 482.6 482.6"
-//                 >
-//                   <path d="M98.339 320.8c47.6 56.9 104.9 101.7 170.3 133.4 24.9 11.8 58.2 25.8 95.3 28.2 2.3.1 4.5.2 6.8.2 24.9 0 44.9-8.6 61.2-26.3" />
-//                 </svg>
-//                 <span>+158 996 888</span>
-//               </li>
-//             </ul>
 //           </div>
 //           <div className="map-container">
 //             <iframe
@@ -139,6 +135,32 @@
 
 // export default Contact;
 
+// const [result, setResult] = React.useState("");
+
+//   const onSubmit = async (event) => {
+//     event.preventDefault();
+//     setResult("Sending....");
+//     const formData = new FormData(event.target);
+
+//     formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+//     const response = await fetch("https://api.web3forms.com/submit", {
+//       method: "POST",
+//       body: formData
+//     });
+
+//     const data = await response.json();
+
+//     if (data.success) {
+//       setResult("Form Submitted Successfully");
+//       event.target.reset();
+//     } else {
+//       console.log("Error", data);
+//       setResult(data.message);
+//     }
+//   };
+
+
 import React, { useState, useEffect } from "react";
 import "../css/Contact.css";
 
@@ -146,6 +168,7 @@ const Contact = () => {
   const [mapUrl, setMapUrl] = useState(
     "https://maps.google.com/maps?q=manhattan&t=&z=13&ie=UTF8&iwloc=&output=embed"
   );
+  const [result, setResult] = useState("");
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -164,6 +187,29 @@ const Contact = () => {
     }
   }, []);
 
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "aaf316d0-e495-4f60-a6ed-220e78170fb8");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <div className="Contact">
       <div className="contact-container">
@@ -177,47 +223,61 @@ const Contact = () => {
               Our experienced team is ready to engage with you.
             </p>
 
-            <form>
+            <form onSubmit={onSubmit}>
               <div className="input-group">
                 <input
                   type="text"
+                  name="name"
                   placeholder="Full Name"
                   className="input-field"
+                  required
                 />
                 <input
                   type="text"
+                  name="street"
                   placeholder="Street"
                   className="input-field"
+                  required
                 />
                 <div className="input-row">
                   <input
                     type="text"
+                    name="city"
                     placeholder="City"
                     className="input-field"
+                    required
                   />
                   <input
                     type="text"
+                    name="postcode"
                     placeholder="Postcode"
                     className="input-field"
+                    required
                   />
                 </div>
                 <input
-                  type="number"
+                  type="tel"
+                  name="phone"
                   placeholder="Phone No."
                   className="input-field"
+                  required
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email"
                   className="input-field"
+                  required
                 />
                 <textarea
+                  name="message"
                   placeholder="Write Message"
                   className="textarea-field"
+                  required
                 ></textarea>
               </div>
 
-              <button type="button" className="submit-button">
+              <button type="submit" className="submit-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16px"
@@ -234,6 +294,7 @@ const Contact = () => {
                 </svg>
                 Send Message
               </button>
+              <p className="form-result">{result}</p>
             </form>
           </div>
           <div className="map-container">
