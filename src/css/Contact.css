@@ -4,7 +4,7 @@
   background-color: #0d0d0d;
   opacity: 0.9;
   position: relative;
-  margin-top: 40px;
+  
 }
 
 .Contact::before {
@@ -29,7 +29,6 @@
   z-index: 1;
   box-sizing: border-box;
   padding: 32px;
-  /* margin-top: 80px; */
 }
 
 .contact-grid {
@@ -37,6 +36,7 @@
   grid-template-columns: 1fr;
   gap: 24px;
   padding: 16px;
+  margin-top: 81px;
 }
 
 @media (min-width: 768px) {
@@ -62,13 +62,13 @@
 }
 
 .contact-description {
-  font-size: 14px;
+  font-size: 20px;
   color: #cbd5e0;
   margin-top: 16px;
 }
 
 .input-group {
-  margin-top: 32px;
+  margin-top: 42px;
 }
 
 .input-field,

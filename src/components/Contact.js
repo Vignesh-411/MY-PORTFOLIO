@@ -374,11 +374,10 @@ const Contact = () => {
         <div className="contact-grid">
           <div className="contact-form-section">
             <h2 className="contact-title">
-              Get In <span className="highlight">Touch</span>
+              GET IN <span className="highlight">TOUCH</span>
             </h2>
             <p className="contact-description">
-              Have a specific inquiry or looking to explore new opportunities?
-              Our experienced team is ready to engage with you.
+             Incase you want to improve your products or services and for collab , you can contact me by submitting the <span className="highlight">Contact Form</span>
             </p>
 
             <form onSubmit={onSubmit}>
