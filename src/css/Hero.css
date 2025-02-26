@@ -609,14 +609,14 @@ svg {
   background-color: #b384ff;
   color: white;
   right: 30%;
-  top: 5px;
-  width: auto; /* Adjusts width dynamically to fit content */
+  top: 0px;
+  width: auto;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 11px;
   font-weight: 500;
   font-family: "MyFont3", sans-serif;
-  transform: translateX(-50%) scale(0); /* Hide and scale down */
+  transform: translateX(-50%) scale(0);
   transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
   z-index: 10;
   white-space: nowrap;
@@ -624,7 +624,7 @@ svg {
 
 .gmail:hover > span {
   visibility: visible;
-  transform: translateX(-50%) scale(1); /* Show tooltip */
+  transform: translateX(-50%) scale(1);
 }
 
 .github {
@@ -721,7 +721,7 @@ svg {
   .linkedin > span,
   .hashnode > span {
     font-size: 12px;
-    top: 40px;
+    top: 2px;
     padding: 6px 12px;
   }
 }
@@ -792,8 +792,7 @@ svg {
 }
 
 @media (max-width: 696px) {
-  
-  .content{
+  .content {
     margin-bottom: -40px;
     margin-top: 20px;
   }
@@ -808,8 +807,7 @@ svg {
 }
 
 @media (max-width: 565px) {
-
-  .content{
+  .content {
     margin-bottom: -100px;
     margin-top: 20px;
   }
@@ -843,8 +841,7 @@ svg {
 }
 
 @media (max-width: 488px) {
-
-  .content h2{
+  .content h2 {
     font-size: 2rem;
   }
 }
@@ -859,6 +856,19 @@ svg {
   .text > p {
     font-size: 10px;
     word-spacing: none;
+  }
+
+  .mhead {
+    font-size: 30px;
+    margin-top: -80px;
+  }
+
+  .m-p {
+    font-size: 30px;
+  }
+
+  .quote{
+    font-size: 2rem;
   }
 
   .gmail > span,
@@ -887,29 +897,27 @@ svg {
     width: 250px;
   }
 
-  .footer-links{
+  .footer-links {
     width: 10px;
   }
-  
+
   .footer-links-column {
     margin-bottom: 30px;
     margin-right: 0px;
   }
 
-  .footer-links-column > a{
+  .footer-links-column > a {
     width: 120px;
   }
 }
 
 @media (max-width: 399px) {
-
   .content h2 {
     font-size: 1.8rem;
   }
 }
 
 @media (max-width: 364px) {
-
   .content h2 {
     font-size: 1.4rem;
   }
@@ -918,7 +926,7 @@ svg {
 @media (max-width: 375px) {
   .gmail > span {
     font-size: 8px;
-    top: 32px;
+
     padding: 3px 6px;
   }
 }
@@ -926,7 +934,7 @@ svg {
 @media (max-width: 320px) {
   .gmail > span {
     font-size: 8px;
-    top: 30px;
+    top: 10px;
     padding: 3px 5px;
   }
 }
